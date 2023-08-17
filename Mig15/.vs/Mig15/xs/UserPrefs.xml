@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{882250E1-A6E3-B757-D449-79FA9C3A8500}|">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/PlayerMouve.cs">
+    <Files>
+      <File FileName="Assets/Script/PlayerMouve.cs" Line="34" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="68a74619-9b4e-41c5-9f55-919d69c4bac3" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
