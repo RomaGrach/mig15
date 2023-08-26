@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8818680601931665431}
   - component: {fileID: 2519804518756412088}
   - component: {fileID: 7487056077251205688}
+  - component: {fileID: 624056467458048082}
+  - component: {fileID: 1905380306965947518}
   m_Layer: 0
   m_Name: PlayerPlayen
   m_TagString: Untagged
@@ -67,6 +69,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 0.3
   anim: {fileID: 3393474337403056371}
+--- !u!136 &624056467458048082
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373749522637254047}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.02
+  m_Height: 0.15
+  m_Direction: 0
+  m_Center: {x: 0, y: 0.02, z: -0.02}
+--- !u!114 &1905380306965947518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373749522637254047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83adee638f9784e4589d502de0ecff53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 3778093876035080865, guid: 7dfa095360001481d981f42b4ec45c06, type: 3}
+  hp: 3
 --- !u!1 &744541702511878335
 GameObject:
   m_ObjectHideFlags: 0
