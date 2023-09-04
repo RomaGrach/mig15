@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _finishWindowGood;
     [SerializeField] GameObject _finishWindowBad;
     public bool win = false;
+    public string objectNameToCheck = "MyEnemy";
+    public float checkInterval = 1f; // Интервал проверки в секундах
     //[SerializeField] CoinManager _coinManager;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Play()
     {
@@ -61,6 +63,36 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
-        
+
+    }
+    public void GoHomeLevel()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void ChekEnemy()
+    {
+        StartCoroutine(CheckForObject());
+    }
+    private IEnumerator CheckForObject()
+    {
+        while (true)
+        {
+            // Проверяем наличие объекта на сцене
+            GameObject objToCheck = GameObject.Find(objectNameToCheck);
+
+            if (objToCheck != null)
+            {
+                Debug.Log($"Объект {objectNameToCheck} найден на сцене.");
+                // Выполните дополнительные действия, если объект найден
+            }
+            else
+            {
+                ShowFinishWindowGoodEnd();
+                Debug.LogWarning($"Объект {objectNameToCheck} не найден на сцене.");
+                // Выполните другие действия в случае отсутствия объекта
+            }
+
+            yield return new WaitForSeconds(checkInterval);
+        }
     }
 }

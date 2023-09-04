@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89209e63f2f7454bba2a388b6c91e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.3
+  movementSpeed: 0.5
   anim: {fileID: 3393474337403056371}
 --- !u!136 &624056467458048082
 CapsuleCollider:
@@ -88,9 +88,9 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.02
+  m_Radius: 0.04
   m_Height: 0.15
-  m_Direction: 0
+  m_Direction: 2
   m_Center: {x: 0, y: 0.02, z: -0.02}
 --- !u!114 &1905380306965947518
 MonoBehaviour:
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 8818680601931665431}
   cameraBox: 0.15
-  speed: 0.3
+  speed: 0.5
 --- !u!114 &218087510595003000
 MonoBehaviour:
   m_ObjectHideFlags: 0

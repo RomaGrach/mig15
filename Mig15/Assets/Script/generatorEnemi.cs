@@ -46,7 +46,7 @@ public class generatorEnemi : MonoBehaviour
         }
         else
         {
-            FindObjectOfType<GameManager>().ShowFinishWindowGoodEnd();
+            FindObjectOfType<GameManager>().ChekEnemy();
         }
     }
 }

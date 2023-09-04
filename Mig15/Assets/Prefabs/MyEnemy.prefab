@@ -122,7 +122,7 @@ MonoBehaviour:
   pozitionX: 0
   pozitionY: 100.04
   pozitionZ: 3
-  movementSpeed: 30
+  initialMovementSpeed: 30
   rotationSpeed: 100
   done: 0
 --- !u!114 &7859249001172366185
