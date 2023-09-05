@@ -63,6 +63,9 @@ public class PlayerMouve : MonoBehaviour
             anim.SetBool("left", false);
             anim.SetBool("right", false);
         }
+        Vector3 newPosition = transform.position;
+        newPosition.x = Mathf.Clamp(newPosition.x, -3f, 3f);
+        transform.position = newPosition;
     }
 
     public void clearAnim()

@@ -17,6 +17,7 @@ public class playerGetDamage : MonoBehaviour
     {
         if (hp <= 0)
         {
+            FindObjectOfType<GameManager>().ShowFinishWindowBadEnd();
             Destroy(gameObject);
         }
     }
