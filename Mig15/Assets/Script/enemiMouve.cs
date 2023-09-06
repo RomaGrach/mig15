@@ -7,9 +7,9 @@ public class enemiMouve : MonoBehaviour
 {
     int mouve = 0;
     public float movementSpeed = 0.2f;
-    public int hp = 3;
+    //public int hp = 3;
     public float zMovementSpeed = 0.1f; // Скорость движения по оси Z
-    [SerializeField] GameObject _bricksEffectPrefab;
+    //[SerializeField] GameObject _bricksEffectPrefab;
 
     private void Start()
     {
@@ -48,13 +48,14 @@ public class enemiMouve : MonoBehaviour
         // Движение назад по оси Z
         Vector3 zMovement = new Vector3(0f, 0f, -zMovementSpeed) * Time.deltaTime;
         transform.Translate(zMovement);
-
+        /*
         if (hp <= 0)
         {
             Destroy(gameObject);
         }
+        */
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "bulletPlayer")
@@ -64,6 +65,7 @@ public class enemiMouve : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    */
 
     private IEnumerator Create3dObjects(float wait)
     {
