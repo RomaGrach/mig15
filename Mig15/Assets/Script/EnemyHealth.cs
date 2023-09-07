@@ -2,20 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+
 
 public class EnemyHealth : MonoBehaviour
 {
     [HideInInspector]
     public UnityEvent OnDie;
-    public int hp = 3;
-    [SerializeField] GameObject _bricksEffectPrefab;
+    public float Maxhp = 3f;
+    public float hp;
+    Image healthBar;
+    [SerializeField] GameObject Image;
 
+    [SerializeField] GameObject _bricksEffectPrefab;
+    private void Start()
+    {
+
+        hp = Maxhp;
+        healthBar = Image.GetComponent<Image>();
+        
+    }
     private void Update()
     {
         if (hp <= 0)
         {
             Die();
         }
+        healthBar.fillAmount = hp / Maxhp;
     }
 
     private void OnTriggerEnter(Collider other)
