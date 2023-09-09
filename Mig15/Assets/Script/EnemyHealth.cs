@@ -43,6 +43,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        FindObjectOfType<ScoreManager>().killedEnemies++;
         Destroy(gameObject);
         OnDie.Invoke();
     }
