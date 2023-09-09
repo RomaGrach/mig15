@@ -39,3 +39,5 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+*.log
+Mig15/Logs/AssetImportWorker0.log
