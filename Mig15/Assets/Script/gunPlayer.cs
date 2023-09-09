@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class gunPlayer : MonoBehaviour
 {
+    public float LinDamage = 0f;
+    public float MultDamage = 1f;
     public GameObject bullet;
     public Transform shotPointL;
     public Transform shotPointR;
@@ -18,6 +20,7 @@ public class gunPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bullet.GetComponent<puly>().damage = (LinDamage + bullet.GetComponent<puly>().damage) * MultDamage;
         if (timeBtwShots <= 0)
         {
             if (Input.GetKey(KeyCode.W))

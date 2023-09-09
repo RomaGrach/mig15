@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class puly : MonoBehaviour
 {
+    public float damage = 1f;
     public float speed;
     public float gravity;
     public float lifetime;

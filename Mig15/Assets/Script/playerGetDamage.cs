@@ -31,7 +31,7 @@ public class playerGetDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "bulletEnemy")
         {
-            hp -= 1;
+            hp -= other.gameObject.GetComponent<puly>().damage;
             Instantiate(_bricksEffectPrefab, transform.position, transform.rotation);
             Destroy(other.gameObject);
         }
