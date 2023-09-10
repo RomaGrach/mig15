@@ -281,9 +281,81 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1601592236154320957, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1950063540148490554, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
       propertyPath: m_Name
       value: Common
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582971609382748849, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105898524388003152, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.62972
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105898524388003152, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -129
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105898524388003152, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -138
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819724281286497490, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58fcae9880bb1d04998b7bfa74d0d64d, type: 3}
+    - target: {fileID: 4819724281286497490, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819724281286497490, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819724281286497490, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819724281286497490, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348358808334399670, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348358808334399670, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348358808334399670, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723621534109974869, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723621534109974869, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 460
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723621534109974869, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723621534109974869, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879681235728196401, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8146573717994510062, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -326,7 +398,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6509124972334564427, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
