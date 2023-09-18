@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
         if (ScoreText != null)
         {
             // Обновите текстовое поле с текущим количеством убитых врагов
-            ScoreText.text = "Убито врагов: " + killedEnemies.ToString();
+            ScoreText.text = " " + killedEnemies.ToString();
         }
     }
 }
