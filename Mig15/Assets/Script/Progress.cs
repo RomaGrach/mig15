@@ -6,8 +6,9 @@ using UnityEngine;
 public class PlayerInfo
 {
     public int Coins;
-    public int kils;
-    public int speed;
+    public int MaxHP;
+    public int Damage;
+    public int TimeBetwinShots;
     public int Level;
 }
 
