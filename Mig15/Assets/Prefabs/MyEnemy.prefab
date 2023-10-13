@@ -572,23 +572,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 653421440609367592, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99387026
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 653421440609367592, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11055288
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 653421440609367592, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 653421440609367592, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 653421440609367592, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -12.694
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 653421440609367592, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -598,34 +598,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3402887632094869070, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3402887632094869070, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.082
-      objectReference: {fileID: 0}
-    - target: {fileID: 3402887632094869070, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3402887632094869070, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3402887632094869070, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3402887632094869070, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571805189887642913, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3a7602cf2b87247508e03eed1aa9d15c, type: 2}
     - target: {fileID: 7511039927144801164, guid: e2c7fe59f777a4139ac2069ed6e5ab32, type: 3}
       propertyPath: m_Name
       value: enemiPlayen

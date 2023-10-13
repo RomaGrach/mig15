@@ -8,11 +8,11 @@ public class gunPlayer : MonoBehaviour
     public Transform shotPointL;
     public Transform shotPointR;
     private float timeBtwShots = 0;
-    public float startTimeBtwShots;
+    float startTimeBtwShots = 1;
     // Start is called before the first frame update
     void Start()
     {
-
+        startTimeBtwShots = Progress.Instance.PlayerInfo.TimeBetwinShots;
     }
 
     // Update is called once per frame

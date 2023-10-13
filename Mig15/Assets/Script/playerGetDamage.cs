@@ -7,12 +7,13 @@ public class playerGetDamage : MonoBehaviour
 {
     [SerializeField] GameObject _bricksEffectPrefab;
     public float hp;
-    public float Maxhp = 3f;
+    float Maxhp = 5;
     Image healthBar;
     [SerializeField] GameObject Image;
     // Start is called before the first frame update
     void Start()
     {
+        Maxhp = Progress.Instance.PlayerInfo.MaxHP;
         hp = Maxhp;
         healthBar = Image.GetComponent<Image>();
     }

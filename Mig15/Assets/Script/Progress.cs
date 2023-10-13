@@ -5,16 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerInfo
 {
-    public int Coins;
-    public int MaxHP;
-    public int Damage;
-    public int TimeBetwinShots;
-    public int Level;
+    public int Coins = 0;
+    public int MaxHP = 5;
+    public int Damage = 2;
+    public float TimeBetwinShots = 0.5f;
+    public int Level = 0;
 }
 
 public class Progress : MonoBehaviour
 {
     public static Progress Instance;
+    public PlayerInfo PlayerInfo;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class Progress : MonoBehaviour
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
             Instance = this;
+            DownloadProgress();
         }
         else
         {
@@ -41,4 +43,25 @@ public class Progress : MonoBehaviour
     {
         
     }
+    public void SaveProgres()
+    {
+        string jsonString = JsonUtility.ToJson(PlayerInfo);
+        PlayerPrefs.SetString("ProgresSave", jsonString);
+    }
+    public void DownloadProgress()
+    {
+        if (PlayerPrefs.HasKey("ProgresSave"))
+        {
+            string jsonString = PlayerPrefs.GetString("ProgresSave");
+            PlayerInfo = JsonUtility.FromJson<PlayerInfo>(jsonString);
+        }
+    }
+
+    public void resetProgress()
+    {
+        PlayerInfo = new PlayerInfo();
+        SaveProgres();
+    }
+
+
 }
