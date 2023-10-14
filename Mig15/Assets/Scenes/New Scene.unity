@@ -400,6 +400,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPlayen
       objectReference: {fileID: 0}
+    - target: {fileID: 5164653684780346072, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164653684780346072, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275904963749862408, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9abee81c984044fe5904cd9fd5c74812, type: 3}
     - target: {fileID: 8818680601931665431, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
