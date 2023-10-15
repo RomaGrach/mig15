@@ -24,7 +24,11 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 71296
+=======
+  controlID: 69513
+>>>>>>> Stashed changes
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +151,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 71297
+=======
+  controlID: 69514
+>>>>>>> Stashed changes
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,7 +181,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 71298
+=======
+  controlID: 69515
+>>>>>>> Stashed changes
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -239,7 +251,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 5a600000
       m_LastClickedID: 0
+<<<<<<< Updated upstream
       m_ExpandedIDs: 7217faff361afaff9cb5fbff66c2fbffb2c2fbfff2c2fbff4ac3fbffb0c3fbff7c15fcff8e48fcff1ebdfcff1abefcffaaeefcff7c40fdff9696fdffd2a5fdffa6a6fdff62a9fdff2cadfdff12c0fdff06c1fdff60c2fdffecf0fefffa0dffff1012ffff1212ffff3214ffff7e17ffff0218ffff541cffff5e1cffff601cffff6a20ffff7420ffff1e21ffff8022ffff54a2ffff14b3ffff2eb3ffff3ab3ffff7cb8ffff14bbffff16bbffff46bdffff74bfffffd8bfffffeec1ffff80c7ffff28edffff32edffffdcedffff1af8ffff26f8ffff2efbffff0e87000032870000ac8a0000d2fb0000
+=======
+      m_ExpandedIDs: 7217faff361afaff9cb5fbff66c2fbffb2c2fbfff2c2fbff4ac3fbffb0c3fbff7c15fcff8e48fcff1ebdfcff1abefcffaaeefcff7c40fdff62a9fdff2cadfdff12c0fdff06c1fdff60c2fdffecf0fefffa0dffff1012ffff1212ffff3214ffff7e17ffff0218ffff541cffff5e1cffff601cffff6a20ffff7420ffff1e21ffff8022ffff54a2ffff14b3ffff2eb3ffff3ab3ffff7cb8ffff14bbffff16bbffff46bdffff74bfffffd8bfffffeec1ffff80c7ffff28edffff32edffffdcedffff1af8ffff26f8ffff2efbffff0e87000032870000ac8a0000d2fb0000
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -282,8 +298,13 @@ MonoBehaviour:
     y: 0
     width: 385.5
     height: 470
+<<<<<<< Updated upstream
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> Stashed changes
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -810,10 +831,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< Updated upstream
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c65e0000
     m_LastClickedID: 24262
     m_ExpandedIDs: 000000006c5e0000c25e000000ca9a3bffffff7f
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: c65e0000
+    m_LastClickedID: 24262
+    m_ExpandedIDs: 000000006c5e000000ca9a3bffffff7f
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
