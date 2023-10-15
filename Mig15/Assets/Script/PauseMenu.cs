@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Exit");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        //SceneManager.LoadScene("Menu");
 
     }
 }
