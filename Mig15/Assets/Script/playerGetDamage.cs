@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class playerGetDamage : MonoBehaviour
 {
     [SerializeField] GameObject _bricksEffectPrefab;
-    public float hp;
-    float Maxhp = 5;
+    public float hp = 5;
+    public float Maxhp = 5;
     Image healthBar;
     [SerializeField] GameObject Image;
     // Start is called before the first frame update
@@ -24,6 +24,7 @@ public class playerGetDamage : MonoBehaviour
         healthBar.fillAmount = hp / Maxhp;
         if (hp <= 0)
         {
+            Debug.Log($"’п дошло до нул€");
             FindObjectOfType<GameManager>().ShowFinishWindowBadEnd();
             Destroy(gameObject);
         }
@@ -32,7 +33,7 @@ public class playerGetDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "bulletEnemy")
         {
-            hp -= 1;
+            hp -= other.gameObject.GetComponent<puly>().damage;
             Instantiate(_bricksEffectPrefab, transform.position, transform.rotation);
             Destroy(other.gameObject);
         }

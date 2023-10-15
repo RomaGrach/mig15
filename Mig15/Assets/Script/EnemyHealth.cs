@@ -35,7 +35,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "bulletPlayer")
         {
-            hp -= Progress.Instance.PlayerInfo.Damage ;
+            //hp -= Progress.Instance.PlayerInfo.Damage ;
+            hp -= other.gameObject.GetComponent<puly>().damage;
             Instantiate(_bricksEffectPrefab, transform.position, transform.rotation);
             Destroy(other.gameObject);
         }
