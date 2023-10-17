@@ -9,6 +9,14 @@ public class CanvasForUpdates : MonoBehaviour
     [SerializeField] TextMeshProUGUI DamageText;
     [SerializeField] TextMeshProUGUI SpeedReloadText;
     [SerializeField] TextMeshProUGUI MoneyText;
+    [SerializeField] float HealthIncrease = 0.05f;
+    [SerializeField] float DamageIncrease = 0.05f;
+    [SerializeField] float ReloadIncrease = 0.05f;
+    [SerializeField] float Inflation = 0.1f;
+    [SerializeField] int StartPrice = 5;
+    private float Hinf = 1.0f;
+    private float Dinf = 1.0f;
+    private float Rinf = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,31 +34,39 @@ public class CanvasForUpdates : MonoBehaviour
 
     public void HealseUpdate()
     {
-        if(Progress.Instance.PlayerInfo.Coins > 5)
+        int price = (StartPrice - 1) + (int)Mathf.Exp(Inflation * Hinf);
+        if (Progress.Instance.PlayerInfo.Coins >= price)
         {
-            Progress.Instance.PlayerInfo.Coins -= 5;
-            Progress.Instance.PlayerInfo.MaxHP += 1;
+            Progress.Instance.PlayerInfo.Coins -= price;
+            Progress.Instance.PlayerInfo.MaxHP *= 1 + HealthIncrease;
             Progress.Instance.SaveProgres();
+            Hinf += 1f;
         }
     }
 
     public void DamageUpdate()
     {
-        if (Progress.Instance.PlayerInfo.Coins > 5)
+        int price = (StartPrice - 1) + (int)Mathf.Exp(Inflation * Dinf);
+        if (Progress.Instance.PlayerInfo.Coins >= price)
         {
-            Progress.Instance.PlayerInfo.Coins -= 5;
-            Progress.Instance.PlayerInfo.Damage += 1;
+            Progress.Instance.PlayerInfo.Coins -= price;
+            Progress.Instance.PlayerInfo.Damage *= 1 + DamageIncrease;
             Progress.Instance.SaveProgres();
+            Dinf += 1f;
+
         }
     }
 
     public void SpeedReloadUpdate()
     {
-        if (Progress.Instance.PlayerInfo.Coins > 5)
+        int price = (StartPrice - 1) + (int)Mathf.Exp(Inflation * Rinf);
+        if (Progress.Instance.PlayerInfo.Coins >= price)
         {
-            Progress.Instance.PlayerInfo.Coins -= 5;
-            Progress.Instance.PlayerInfo.TimeBetwinShots -= 0.1f;
+            Progress.Instance.PlayerInfo.Coins -= price;
+            float shotSpeed = Progress.Instance.PlayerInfo.TimeBetwinShots * (ReloadIncrease);
+            Progress.Instance.PlayerInfo.TimeBetwinShots -= shotSpeed;
             Progress.Instance.SaveProgres();
+            Rinf += 1f;
         }
     }
 }

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInfo:
-    Coins: 0
+    Coins: 10000
     MaxHP: 0
     Damage: 0
     TimeBetwinShots: 0
