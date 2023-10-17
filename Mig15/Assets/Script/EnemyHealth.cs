@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 
 
@@ -35,6 +36,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "bulletPlayer")
         {
+            HitMarker();
             //hp -= Progress.Instance.PlayerInfo.Damage ;
             hp -= other.gameObject.GetComponent<puly>().damage;
             Instantiate(_bricksEffectPrefab, transform.position, transform.rotation);
@@ -47,5 +49,11 @@ public class EnemyHealth : MonoBehaviour
         FindObjectOfType<ScoreManager>().killedEnemies++;
         Destroy(gameObject);
         OnDie.Invoke();
+    }
+
+    private void HitMarker()
+    {
+        // Находим объект по имени
+        FindObjectOfType<hitMarkerSkript>().startHitMarker();
     }
 }
