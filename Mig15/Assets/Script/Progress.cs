@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerInfo
 {
     public int Coins = 0;
+    public int Killed = 0;
+    public int Flight = 0;
     public float MaxHP = 5;
     public float Damage = 2;
     public float TimeBetwinShots = 0.5f;

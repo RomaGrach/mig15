@@ -31,6 +31,8 @@ public class ScoreManager : MonoBehaviour
                 endMoney = (int)(killedEnemies * 1.2); // endMoney должнобыть целое число
                 MoneyTextEnd.text = "Заработанно: " + endMoney.ToString();
                 Progress.Instance.PlayerInfo.Coins += endMoney;
+                Progress.Instance.PlayerInfo.Killed += killedEnemies;
+                Progress.Instance.PlayerInfo.Flight += 1;
                 Progress.Instance.SaveProgres();
                 flag = false;
             }
