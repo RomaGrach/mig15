@@ -617,7 +617,7 @@ PrefabInstance:
       addedObject: {fileID: 1592791303}
     - targetCorrespondingSourceObject: {fileID: 6859998557344967345, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1865897062}
+      addedObject: {fileID: 1865897059}
     - targetCorrespondingSourceObject: {fileID: 130890442527605150, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 541317999}
@@ -1278,7 +1278,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6859998557344967345, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
   m_PrefabInstance: {fileID: 760037772}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1865897062
+--- !u!82 &1865897059
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1290,13 +1290,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 94f8cbee9a15d45478a7bca1e781abe5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.375
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 0
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
