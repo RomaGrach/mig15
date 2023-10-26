@@ -1,32 +1,34 @@
 ﻿<Properties StartupConfiguration="{882250E1-A6E3-B757-D449-79FA9C3A8500}|">
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e7e2bd91-0731-4f62-b0e8-1e56922144cc" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/enemiController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Progress.cs">
     <Files>
       <File FileName="Assets/Script/PlayerMouve.cs" />
-      <File FileName="Assets/Script/enemiController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/enemiController.cs" />
       <File FileName="Assets/Script/enemiMouve.cs" />
       <File FileName="Assets/Script/generatorEnemi.cs" />
       <File FileName="Assets/Script/CameraMove.cs" />
       <File FileName="Assets/Script/enemyGoToPosition.cs" />
-      <File FileName="Assets/Script/MainMenu.cs" />
-      <File FileName="Assets/Script/PointerManager.cs" />
-      <File FileName="Assets/Script/EnemyPointer.cs" />
-      <File FileName="Assets/Script/PauseMenu.cs" />
-      <File FileName="Assets/Script/puly.cs" />
+      <File FileName="Assets/Script/MainMenu.cs" Line="9" Column="45" />
+      <File FileName="Assets/Script/PointerManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/EnemyPointer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PauseMenu.cs" Line="49" Column="1" />
+      <File FileName="Assets/Script/puly.cs" Line="8" Column="1" />
+      <File FileName="Assets/CanvasForUpdates.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/Progress.cs" Line="11" Column="13" />
-      <File FileName="Assets/Script/GameManager.cs" />
-      <File FileName="Assets/Script/ScoreManager.cs" />
-      <File FileName="Assets/Script/PlayerHealthRegen.cs" />
-      <File FileName="Assets/Script/LevelTransition.cs" />
-      <File FileName="Assets/Script/gunPlayer.cs" />
-      <File FileName="Assets/Script/playerGetDamage.cs" />
-      <File FileName="Assets/Script/EnemyHealth.cs" />
+      <File FileName="Assets/Script/GameManager.cs" Line="73" Column="26" />
+      <File FileName="Assets/Script/ScoreManager.cs" Line="37" Column="1" />
+      <File FileName="Assets/Script/PlayerHealthRegen.cs" Line="26" Column="28" />
+      <File FileName="Assets/Script/LevelTransition.cs" Line="10" Column="39" />
+      <File FileName="Assets/Script/gunPlayer.cs" Line="44" Column="44" />
+      <File FileName="Assets/Script/playerGetDamage.cs" Line="24" Column="43" />
+      <File FileName="Assets/hitMarkerSkript.cs" Line="29" Column="1" />
+      <File FileName="Assets/Script/EnemyHealth.cs" Line="41" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="04630034-9fee-4acd-83cc-cced8834c1ac" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
