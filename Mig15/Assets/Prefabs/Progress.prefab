@@ -46,7 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInfo:
     Coins: 10000
-    MaxHP: 0
-    Damage: 0
-    TimeBetwinShots: 0
+    Killed: 0
+    Flight: 0
+    MaxHP: 5
+    Damage: 2
+    TimeBetwinShots: 0.5
     Level: 0
