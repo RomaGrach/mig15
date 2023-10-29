@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 451625593984779893, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -370
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 451625593984779893, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -226,6 +226,10 @@ PrefabInstance:
     - target: {fileID: 2694869898817668050, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071682875070443703, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 533
       objectReference: {fileID: 0}
     - target: {fileID: 4553963859203691581, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
       propertyPath: m_Sprite
@@ -416,7 +420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &880866648
 RectTransform:
   m_ObjectHideFlags: 0
@@ -642,7 +646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1802967510
 RectTransform:
   m_ObjectHideFlags: 0
