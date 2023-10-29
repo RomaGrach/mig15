@@ -34,8 +34,10 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("нету");
         if (other.gameObject.tag == "bulletPlayer")
         {
+            Debug.Log("есть");
             HitMarker();
             //hp -= Progress.Instance.PlayerInfo.Damage ;
             hp -= other.gameObject.GetComponent<puly>().damage;
