@@ -27,6 +27,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (hp <= 0)
         {
+            
             Die();
         }
         healthBar.fillAmount = hp / Maxhp;
@@ -48,6 +49,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        GlobalEventManager.SendEnemyKilled();
         FindObjectOfType<ScoreManager>().killedEnemies++;
         Destroy(gameObject);
         OnDie.Invoke();

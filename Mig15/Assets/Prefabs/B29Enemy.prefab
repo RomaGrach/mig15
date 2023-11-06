@@ -628,7 +628,7 @@ MonoBehaviour:
   player: {fileID: 0}
   VerticalDrives: {fileID: 3028312828720525552}
   MaxAngel: 35
-  bullet: {fileID: 7911398693265506334, guid: 36cdde9b681124b2cb4c2d2053301bb1, type: 3}
+  bullet: {fileID: 8268627351118764441, guid: 65ba0ae559a104463a4f6864dc8535ab, type: 3}
   shotPoint1: {fileID: 1679163554175385849}
   shotPoint2: {fileID: 2940228617339955313}
   startTimeBtwShots: 1

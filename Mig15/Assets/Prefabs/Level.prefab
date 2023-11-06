@@ -570,6 +570,37 @@ MonoBehaviour:
   - {fileID: 7531932096126109596, guid: 82f2ad52d2b394d64aee0727e88055c3, type: 3}
   - {fileID: 7590521974325759359, guid: d7f78d4c658304c60a318ff3c667d18d, type: 3}
   - {fileID: 410915472998274046, guid: f018965f881bd4f98b7979d1b75cd3fd, type: 3}
+--- !u!1 &3696793573687268304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1884695166659556045}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1884695166659556045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696793573687268304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1366171304882658125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6230261719708921664
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +747,37 @@ MonoBehaviour:
   - {fileID: 7531932096126109596, guid: 82f2ad52d2b394d64aee0727e88055c3, type: 3}
   - {fileID: 7590521974325759359, guid: d7f78d4c658304c60a318ff3c667d18d, type: 3}
   - {fileID: 410915472998274046, guid: f018965f881bd4f98b7979d1b75cd3fd, type: 3}
+--- !u!1 &6918065369393919247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8063239760148583420}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8063239760148583420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6918065369393919247}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.91, z: -4.307}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1366171304882658125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7289520014130056666
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1366171304882658125}
   - component: {fileID: 7512663409448139550}
+  - component: {fileID: 5421441847822793044}
   m_Layer: 0
   m_Name: generatorEnemi
   m_TagString: Untagged
@@ -742,10 +805,12 @@ Transform:
   m_GameObject: {fileID: 7289520014130056666}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.88439, y: 99.913376, z: 0.025926948}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1884695166659556045}
+  - {fileID: 8063239760148583420}
   m_Father: {fileID: 1104162115605216483}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7512663409448139550
@@ -755,7 +820,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7289520014130056666}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2516bdc3e46cc41d48ccb6ce06c0c6d5, type: 3}
   m_Name: 
@@ -767,6 +832,40 @@ MonoBehaviour:
   pozitionZ: 5
   limOfEnemyNomber: 5
   timeBetwinEnemi: 2
+--- !u!114 &5421441847822793044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289520014130056666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2992e873652be4f238128641f064de05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BattleStages:
+    Stage1: 000000000000000000000000
+    Stage2: 0000000001000000
+    Stage3: 
+    Stage4: 
+    Stage5: 
+    Stage6: 
+    Stage7: 
+    Stage8: 
+    Stage9: 
+    Stage10: 
+    Stage11: 
+  NowNumberOfStages: 2
+  TipeOfStage: 0100000001000000
+  EnemisPrefabs:
+  - {fileID: 8812171210267481820, guid: 0a80966896e39489896c1e584f3f1b13, type: 3}
+  - {fileID: 2751004890679771314, guid: bec0554dce1714d45917c7698a0fbf81, type: 3}
+  GenerationPositions:
+  - {fileID: 1884695166659556045}
+  - {fileID: 8063239760148583420}
+  TimeBetweenGenerations: 1
+  TimeBetweenStages: 1
 --- !u!1 &9125021973051179964
 GameObject:
   m_ObjectHideFlags: 0
