@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     }
     public void Play()
     {
-        FindObjectOfType<generatorEnemi>().Play();
+        FindObjectOfType<GeneratorEnemiModified>().Play();
         _startMenu.SetActive(false);
 
         //FindObjectOfType<PlayerBehaviour>().Play();
