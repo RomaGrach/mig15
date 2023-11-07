@@ -307,9 +307,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnvironmentTypes:
     Fields:
+    - {fileID: 5195065267850067545, guid: 463cffdd521aa4b6cbcd073593b3facb, type: 3}
+    - {fileID: 5308482693159681832, guid: 1640b687ba8994c1ba41153046fd2701, type: 3}
+    - {fileID: 5308482693159681832, guid: 1640b687ba8994c1ba41153046fd2701, type: 3}
     - {fileID: 5308482693159681832, guid: 1640b687ba8994c1ba41153046fd2701, type: 3}
     WinterFields: []
-    Village: []
+    Village:
+    - {fileID: 4310616107628193671, guid: 89b95234a54cc4a7bb748de54cb7108f, type: 3}
     FallbackOption1: []
     FallbackOption2: []
     FallbackOption3: []
