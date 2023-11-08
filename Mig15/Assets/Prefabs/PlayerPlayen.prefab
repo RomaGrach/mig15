@@ -40,6 +40,7 @@ Transform:
   - {fileID: 8317498924106658196}
   - {fileID: 7823978291947104608}
   - {fileID: 275812347553719565}
+  - {fileID: 6031597325734560148}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2519804518756412088
@@ -57,10 +58,14 @@ MonoBehaviour:
   LinDamage: 0
   MultDamage: 1
   bullet: {fileID: 8268627351118764441, guid: df8be8639cbd94161b7a0bd412e99498, type: 3}
+  bullet37: {fileID: 8268627351118764441, guid: 12c77c5a07c6d42568974840cbf7f14f, type: 3}
   shotPointL: {fileID: 6597246041038594609}
   shotPointR: {fileID: 1575329925346497392}
+  shotPoint37mm: {fileID: 6031597325734560148}
   startTimeBtwShots: 0.5
+  startTimeBtwShots37: 2
   _ImageSmallGun: {fileID: 8278533342951778855}
+  _ImageBigGun: {fileID: 707397463850693437}
 --- !u!114 &7487056077251205688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,6 +880,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5117686353940767437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6031597325734560148}
+  m_Layer: 0
+  m_Name: Gun37
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6031597325734560148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117686353940767437}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0228, z: 0.0405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8818680601931665431}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7958765298461994835
 GameObject:
   m_ObjectHideFlags: 0

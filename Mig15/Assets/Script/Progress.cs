@@ -11,6 +11,7 @@ public class PlayerInfo
     public float MaxHP = 5;
     public float Damage = 2;
     public float TimeBetwinShots = 0.5f;
+    public float TimeBetwinShots37 = 2f;
     public int Level = 0;
 }
 
