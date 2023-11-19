@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -23,22 +24,50 @@ public class GeneratorEnemiModified : MonoBehaviour
 {
     public BattleStages BattleStages;
     public int NowNumberOfStages;
-    public int[] TipeOfStage; // 0-таймер 1-убить Всех Врагов
+    public float[] TipeOfStage; // 0-таймер 1-убить Всех Врагов
     public int[][] BS;
     public List<GameObject> EnemisPrefabs;
     public List<Transform> GenerationPositions;
-    public float TimeBetweenGenerations;
-    public float TimeBetweenStages;
+    public float[] TimeBetweenGenerations;
+    public float[] TimeBetweenStages;
+    public bool GenerateStages = true;
 
 
     private int enemisOnScene;
     // Start is called before the first frame update
     void Start()
     {
-        TransferBattleStages(BattleStages);
+        TipeOfStage = new float[NowNumberOfStages];
+        TimeBetweenGenerations = new float[NowNumberOfStages];
+        TimeBetweenStages = new float[NowNumberOfStages];
+        BS = new int[NowNumberOfStages][];
+        if (GenerateStages)
+        {
+            StartGenerations();
+        }else
+        {
+            TransferBattleStages(BattleStages);
+        }
         GlobalEventManager.OnEnemyKilled.AddListener(EnemiKildForTipe1);
     }
+    public void StartGenerations()
+    {
 
+        for (int i = 0; i < NowNumberOfStages; i++)
+        {
+            int RS = Random.Range(0, StageOptions.Instance.RepositoryOfStageOptions.Options.Length);
+            
+            TipeOfStage[i] = StageOptions.Instance.RepositoryOfStageOptions.Options[RS][0];
+            TimeBetweenStages[i] = StageOptions.Instance.RepositoryOfStageOptions.Options[RS][1];
+            TimeBetweenGenerations[i] = StageOptions.Instance.RepositoryOfStageOptions.Options[RS][2];
+            BS[i] = new int[StageOptions.Instance.RepositoryOfStageOptions.Options[RS].Length - 3];
+            Debug.Log(string.Join(", ", StageOptions.Instance.RepositoryOfStageOptions.Options[RS].Select(element => element.ToString()).ToArray()));
+            for (int j = 0; j < BS[i].Length; j++)
+            {
+                BS[i][j] = (int)StageOptions.Instance.RepositoryOfStageOptions.Options[RS][j + 3];
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -64,9 +93,9 @@ public class GeneratorEnemiModified : MonoBehaviour
                         GenerateObject(EnemisPrefabs[BS[i][j]], GenerationPositions[0],true);
                     }
 
-                    yield return new WaitForSeconds(TimeBetweenGenerations);// таймер TimeBetweenGenerations
+                    yield return new WaitForSeconds(TimeBetweenGenerations[i]);// таймер TimeBetweenGenerations
                 }
-                yield return new WaitForSeconds(TimeBetweenStages);// таймер TimeBetweenStages
+                yield return new WaitForSeconds(TimeBetweenStages[i]);// таймер TimeBetweenStages
             }
             else if (TipeOfStage[i] == 1)
             {
@@ -82,7 +111,7 @@ public class GeneratorEnemiModified : MonoBehaviour
                         GenerateObject(EnemisPrefabs[BS[i][j]], GenerationPositions[0], true);
                     }
 
-                    yield return new WaitForSeconds(TimeBetweenGenerations);// таймер TimeBetweenGenerations
+                    yield return new WaitForSeconds(TimeBetweenGenerations[i]);// таймер TimeBetweenGenerations
                 }
                 while (enemisOnScene > 0)
                 {
