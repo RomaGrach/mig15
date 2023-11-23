@@ -12761,8 +12761,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealseText: {fileID: 2142073490}
+  ButtonHealthText: {fileID: 2132096439}
   DamageText: {fileID: 129632166}
+  ButtonDamageText: {fileID: 128182675}
   SpeedReloadText: {fileID: 73077454}
+  ButtonSpeedReloadText: {fileID: 904828714}
   MoneyText: {fileID: 1396052429}
   HealthIncrease: 0.05
   DamageIncrease: 0.05
