@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class BattleStages
@@ -21,28 +24,81 @@ public class BattleStages
 
 public class GeneratorEnemiModified : MonoBehaviour
 {
+    Image LevelBar;
+    [SerializeField] TextMeshProUGUI TextTypeOfLevel;
+    [SerializeField] GameObject Image;
     public BattleStages BattleStages;
     public int NowNumberOfStages;
-    public int[] TipeOfStage; // 0-таймер 1-убить Всех Врагов
+    public float[] TipeOfStage; // 0-таймер 1-убить Всех Врагов
     public int[][] BS;
     public List<GameObject> EnemisPrefabs;
     public List<Transform> GenerationPositions;
-    public float TimeBetweenGenerations;
-    public float TimeBetweenStages;
+    public float[] TimeBetweenGenerations;
+    public float[] TimeBetweenStages;
+    public bool GenerateStages = true;
+    float Bar = 0;
+    float StartBar = 0;
+    bool flagForBar = false;
+    bool flagForBar1 = false;
 
 
     private int enemisOnScene;
     // Start is called before the first frame update
     void Start()
     {
-        TransferBattleStages(BattleStages);
+        LevelBar = Image.GetComponent<Image>();
+        TipeOfStage = new float[NowNumberOfStages];
+        TimeBetweenGenerations = new float[NowNumberOfStages];
+        TimeBetweenStages = new float[NowNumberOfStages];
+        BS = new int[NowNumberOfStages][];
+        if (GenerateStages)
+        {
+            StartGenerations();
+        }else
+        {
+            TransferBattleStages(BattleStages);
+        }
         GlobalEventManager.OnEnemyKilled.AddListener(EnemiKildForTipe1);
     }
+    public void StartGenerations()
+    {
 
+        for (int i = 0; i < NowNumberOfStages; i++)
+        {
+            int RS = Random.Range(0, StageOptions.Instance.RepositoryOfStageOptions.Options.Length);
+            
+            TipeOfStage[i] = StageOptions.Instance.RepositoryOfStageOptions.Options[RS][0];
+            TimeBetweenStages[i] = StageOptions.Instance.RepositoryOfStageOptions.Options[RS][1];
+            TimeBetweenGenerations[i] = StageOptions.Instance.RepositoryOfStageOptions.Options[RS][2];
+            BS[i] = new int[StageOptions.Instance.RepositoryOfStageOptions.Options[RS].Length - 3];
+            Debug.Log(string.Join(", ", StageOptions.Instance.RepositoryOfStageOptions.Options[RS].Select(element => element.ToString()).ToArray()));
+            for (int j = 0; j < BS[i].Length; j++)
+            {
+                BS[i][j] = (int)StageOptions.Instance.RepositoryOfStageOptions.Options[RS][j + 3];
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
+        if (flagForBar)
+        {
+            Debug.Log(StartBar);
+            LevelBar.fillAmount = Bar / StartBar;
+            if (flagForBar1)
+            {
+                if (Bar - Time.deltaTime > 0)
+                {
+                    Bar -= Time.deltaTime;
+                }
+            }
+            else
+            {
+                Bar = (float)enemisOnScene;
+            }
+        }
         
+
     }
     public void Play()
     {
@@ -52,7 +108,7 @@ public class GeneratorEnemiModified : MonoBehaviour
     {
         for (int i = 0; i < NowNumberOfStages; i++)
         {
-            if (TipeOfStage[i] == 0) { 
+            if (TipeOfStage[i] == 0) {
                 for (int j = 0; j < BS[i].Length; j++)
                 {
                     if (BS[i][j] == 1)
@@ -64,13 +120,15 @@ public class GeneratorEnemiModified : MonoBehaviour
                         GenerateObject(EnemisPrefabs[BS[i][j]], GenerationPositions[0],true);
                     }
 
-                    yield return new WaitForSeconds(TimeBetweenGenerations);// таймер TimeBetweenGenerations
+                    yield return new WaitForSeconds(TimeBetweenGenerations[i]);// таймер TimeBetweenGenerations
                 }
-                yield return new WaitForSeconds(TimeBetweenStages);// таймер TimeBetweenStages
+                CanvasMaker(i);
+                yield return new WaitForSeconds(TimeBetweenStages[i]);// таймер TimeBetweenStages
             }
             else if (TipeOfStage[i] == 1)
             {
                 enemisOnScene = BS[i].Length;
+                CanvasMaker(i);
                 for (int j = 0; j < BS[i].Length; j++)
                 {
                     if (BS[i][j] == 1)
@@ -82,7 +140,7 @@ public class GeneratorEnemiModified : MonoBehaviour
                         GenerateObject(EnemisPrefabs[BS[i][j]], GenerationPositions[0], true);
                     }
 
-                    yield return new WaitForSeconds(TimeBetweenGenerations);// таймер TimeBetweenGenerations
+                    yield return new WaitForSeconds(TimeBetweenGenerations[i]);// таймер TimeBetweenGenerations
                 }
                 while (enemisOnScene > 0)
                 {
@@ -125,5 +183,25 @@ public class GeneratorEnemiModified : MonoBehaviour
             battleStages.Stage10,
             battleStages.Stage11
         };
+    }
+    public void CanvasMaker(int TOS)
+    {
+        if (TipeOfStage[TOS] == 0)
+        {
+            TextTypeOfLevel.text = "Уничтож врагов за: " + TimeBetweenStages[TOS].ToString() + "c";
+            StartBar = TimeBetweenStages[TOS];
+            Bar = StartBar;
+            flagForBar1 = true;
+        }
+        else if (TipeOfStage[TOS] == 1)
+        {
+            StartBar = (float)BS[TOS].Length;
+            TextTypeOfLevel.text = "Уничтож " + BS[TOS].Length.ToString() + " врагов";
+            Bar = StartBar;
+            flagForBar1 = false;
+        }
+        flagForBar = true;
+
+
     }
 }
