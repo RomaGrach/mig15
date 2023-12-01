@@ -27,6 +27,7 @@ public class GeneratorEnemiModified : MonoBehaviour
     Image LevelBar;
     [SerializeField] TextMeshProUGUI TextTypeOfLevel;
     [SerializeField] GameObject Image;
+    [SerializeField] GameObject CanvasTypeOfLevel;
     public BattleStages BattleStages;
     public int NowNumberOfStages;
     public float[] TipeOfStage; // 0-таймер 1-убить Всех Врагов
@@ -83,6 +84,7 @@ public class GeneratorEnemiModified : MonoBehaviour
     {
         if (flagForBar)
         {
+            CanvasTypeOfLevel.SetActive(true);
             Debug.Log(StartBar);
             LevelBar.fillAmount = Bar / StartBar;
             if (flagForBar1)

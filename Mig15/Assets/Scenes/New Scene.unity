@@ -221,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &458455711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1357,6 +1357,10 @@ PrefabInstance:
       propertyPath: TextTypeOfLevel
       value: 
       objectReference: {fileID: 865330428}
+    - target: {fileID: 5421441847822793044, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
+      propertyPath: CanvasTypeOfLevel
+      value: 
+      objectReference: {fileID: 458455710}
     - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: TypeOfEnvironment
       value: 2
