@@ -7,10 +7,15 @@ using UnityEngine.Events;
 public class GlobalEventManager
 {
     public static UnityEvent OnEnemyKilled = new UnityEvent();
+    public static UnityEvent OnStartOfLevel = new UnityEvent();
 
     public static void SendEnemyKilled()
     {
         OnEnemyKilled.Invoke();
+    }
+    public static void SendLevelStarted()
+    {
+        OnStartOfLevel.Invoke();
     }
 
     /*

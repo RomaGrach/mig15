@@ -878,7 +878,7 @@ MonoBehaviour:
   multHeal: 1
   speed: 0
   rotation_speed: 0.5
-  distanceZ: 4
+  distanceZ: 1
   pos: {x: 0, y: 100, z: 2}
 --- !u!54 &6113958663303429440
 Rigidbody:

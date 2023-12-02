@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 11594
+  controlID: 19314
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 11595
+  controlID: 19315
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 11596
+  controlID: 19316
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -236,9 +236,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 345ffbff
+      m_SelectedIDs: c2750100
       m_LastClickedID: 0
-      m_ExpandedIDs: 0c5bfbff4c5dfbff1460fbff8461fbff1a63fbffd0fdfcffe0fdfcff2e03fdffb207fdff720efdff4417fdff281bfdffae1efdffa230ffffca41ffff1842ffff5448ffffb84bffff4259ffff9095ffffb695ffff1eeaffff90eaffffa8eeffffaaeeffffe0efffffb2f2ffff0ef3ffffdef5ffff28fbffff2afbffff02ca00006ccd0000ecce0000563d01003e3e0100743f0100903f0100fe610100
+      m_ExpandedIDs: 1c00e2ff6001e2ff7e01e2ff9a01e2ffe802e2ff8445e5ff8645e5ffeedcf6ff56e3f6ff02eaf6ff0c5bfbff4c5dfbff1460fbff8461fbff1a63fbffd0fdfcffe0fdfcff2e03fdffb207fdff720efdff4417fdff281bfdffae1efdffa230ffffca41ffff1842ffff5448ffffb84bffff4259ffff9095ffffb695ffff1eeaffff90eaffffa8eeffffaaeeffffe0efffffb2f2ffff0ef3ffffdef5ffff28fbffff2afbffff02ca00006ccd0000ecce0000563d01003e3e0100743f0100903f0100fe610100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -254,7 +254,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -697,9 +697,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 960, y: 985, z: 0}
+    m_Target: {x: -1.6657997, y: 100.377464, z: 9.201781}
     speed: 2
-    m_Value: {x: 960, y: 985, z: 0}
+    m_Value: {x: -1.6657997, y: 100.377464, z: 9.201781}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -745,13 +745,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0014999978, y: -0.0014999978, z: -0.0000022499983, w: 0.99999774}
+    m_Target: {x: 0.06860108, y: 0.5022155, z: -0.04001048, w: 0.8610882}
     speed: 2
-    m_Value: {x: -0.0014999979, y: -0.0014999979, z: -0.0000022499985, w: 0.9999978}
+    m_Value: {x: 0.06860107, y: 0.50221545, z: -0.040010475, w: 0.8610881}
   m_Size:
-    m_Target: 1391.8673
+    m_Target: 0.051965054
     speed: 2
-    m_Value: 1391.8673
+    m_Value: 0.051965054
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -848,7 +848,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -856,15 +856,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/romagrachev/mig15Work/Mig15
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 63}
-    m_SelectedIDs: faae0000
-    m_LastClickedID: 44794
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 2aaf0000
+    m_LastClickedID: 44842
     m_ExpandedIDs: 0000000064790000faae0000fcae0000feae000000af00003caf00005eb0000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -918,9 +918,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 345ffbff
-    m_LastClickedInstanceID: -303308
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: c2750100
+    m_LastClickedInstanceID: 95682
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000ceb10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

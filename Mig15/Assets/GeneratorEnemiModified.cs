@@ -47,6 +47,7 @@ public class GeneratorEnemiModified : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GlobalEventManager.OnStartOfLevel.AddListener(Play);
         LevelBar = Image.GetComponent<Image>();
         TipeOfStage = new float[NowNumberOfStages];
         TimeBetweenGenerations = new float[NowNumberOfStages];
@@ -85,7 +86,7 @@ public class GeneratorEnemiModified : MonoBehaviour
         if (flagForBar)
         {
             CanvasTypeOfLevel.SetActive(true);
-            Debug.Log(StartBar);
+            
             LevelBar.fillAmount = Bar / StartBar;
             if (flagForBar1)
             {
