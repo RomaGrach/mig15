@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Accessibility;
+using static UnityEngine.Rendering.DebugUI;
 
 [System.Serializable]
 public class PlayerInfo
@@ -20,23 +23,51 @@ public class PlayerInfo
 
 public class Progress : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern void SaveExtern(string date);
+    [DllImport("__Internal")]
+    private static extern void LoadExtern();
+
     public static Progress Instance;
     public PlayerInfo PlayerInfo;
+    public bool Yandex = false;
+    public bool Test = false;
 
     private void Awake()
     {
+        Yandex = false;
+#if UNITY_WEBGL
+        Yandex = true;
+        Debug.Log("Unity WEBGL");
+#endif
+#if UNITY_EDITOR
+        Yandex = false;
+        Debug.Log("Unity Editor");
+#endif
+        
         if (Instance == null)
         {
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
             Instance = this;
-            DownloadProgress();
+            StartCoroutine(WaitTime());
         }
         else
         {
             Destroy(gameObject);
         }
+
     }
+    private IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(2f);
+        Test = true;
+        Debug.Log("WaitTime" + PlayerInfo.Coins);
+        DownloadProgress();
+        Debug.Log("WaitTime" + PlayerInfo.Coins);
+
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,10 +82,34 @@ public class Progress : MonoBehaviour
     }
     public void SaveProgres()
     {
-        string jsonString = JsonUtility.ToJson(PlayerInfo);
-        PlayerPrefs.SetString("ProgresSave", jsonString);
+        Debug.Log("SaveProgres" + Yandex);
+        if (Yandex)
+        {
+            SaveProgresYandex();
+        }
+        else
+        {
+            SaveProgresPlayerPrefs();
+        }
+        Debug.Log(PlayerInfo);
     }
+
+
     public void DownloadProgress()
+    {
+        Debug.Log("DownloadProgress" + Yandex);
+        if (Yandex)
+        {
+            LoadExtern();
+        }
+        else
+        {
+            DownloadProgressPlayerPrefs();
+        }
+        Debug.Log(PlayerInfo);
+    }
+
+    public void DownloadProgressPlayerPrefs()
     {
         if (PlayerPrefs.HasKey("ProgresSave"))
         {
@@ -63,11 +118,27 @@ public class Progress : MonoBehaviour
         }
     }
 
+    public void SaveProgresPlayerPrefs()
+    {
+        string jsonString = JsonUtility.ToJson(PlayerInfo);
+        PlayerPrefs.SetString("ProgresSave", jsonString);
+    }
+
     public void resetProgress()
     {
         PlayerInfo = new PlayerInfo();
         SaveProgres();
     }
 
+    public void SaveProgresYandex()
+    {
+        string jsonString = JsonUtility.ToJson(PlayerInfo);
+        SaveExtern(jsonString);
+    }
+
+    public void SetPlayerInfoYandex(string value)
+    {
+        PlayerInfo = JsonUtility.FromJson<PlayerInfo>(value);
+    }
 
 }

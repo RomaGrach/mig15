@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    [DllImport("__Internal")]
+    private static extern void ShowAdv();
     [SerializeField] private GameObject _startMenu;
     [SerializeField] TextMeshProUGUI _LevelText;
     [SerializeField] GameObject _finishWindow;
@@ -19,6 +21,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //ShowAdv();   метод для вызова рекламы
         _LevelText.text = SceneManager.GetActiveScene().name;
         _startMenu.SetActive(true);
     }
