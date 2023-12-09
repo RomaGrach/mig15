@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Videoclip2.unity
     guid: 333af7be4c7215942976d641bb23d9f0
+  - enabled: 1
+    path: Assets/Scenes/UpdatesMenu.unity
+    guid: 0b860ff5e2f2f41c0ac63ba35c243c4f
   m_configObjects: {}
