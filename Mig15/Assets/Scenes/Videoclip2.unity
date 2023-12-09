@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -266,10 +266,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1631214957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -316, y: -301}
-  m_SizeDelta: {x: 550, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -281.10004, y: -301}
+  m_SizeDelta: {x: -1316.2, y: -880}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &124580307
 Animator:
@@ -515,10 +515,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1631214957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -451, y: -301}
-  m_SizeDelta: {x: 410, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -477.99994, y: -301}
+  m_SizeDelta: {x: -1510, y: -880}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &711229884
 Animator:
@@ -838,10 +838,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1631214957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -283, y: -245}
-  m_SizeDelta: {x: 600, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -282.49994, y: -353}
+  m_SizeDelta: {x: -1319, y: -830}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1335752845
 Animator:
@@ -1217,10 +1217,10 @@ RectTransform:
   - {fileID: 73904843}
   m_Father: {fileID: 1631214957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 623, y: -407}
-  m_SizeDelta: {x: 534, y: 284}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 623.5, y: -407}
+  m_SizeDelta: {x: -1387, y: -796}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039046505
 MonoBehaviour:
