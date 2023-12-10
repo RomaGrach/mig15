@@ -114,7 +114,7 @@ public class GeneratorEnemiModified : MonoBehaviour
             if (TipeOfStage[i] == 0) {
                 for (int j = 0; j < BS[i].Length; j++)
                 {
-                    if (BS[i][j] == 1)
+                    if (BS[i][j] == 1 || BS[i][j] == 2)
                     {
                         GenerateObject(EnemisPrefabs[BS[i][j]], GenerationPositions[1], false);
                     }
@@ -134,7 +134,7 @@ public class GeneratorEnemiModified : MonoBehaviour
                 CanvasMaker(i);
                 for (int j = 0; j < BS[i].Length; j++)
                 {
-                    if (BS[i][j] == 1)
+                    if (BS[i][j] == 1 || BS[i][j] == 2)
                     {
                         GenerateObject(EnemisPrefabs[BS[i][j]], GenerationPositions[1], false);
                     }

@@ -14,6 +14,11 @@ public class RepositoryOfStageOptions
     new float[] { 1, 20, 5, 0,0,0,0,0,0,0,0 },
     new float[] { 0, 30, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,0 },
     new float[] { 0, 10, 0.1f, 0,0,0 },
+    new float[] { 1, 10, 1, 2,2,2 },
+    new float[] { 1, 10, 1, 2,1,1,1 },
+    new float[] { 1, 10, 1, 2,1,2,1,1 },
+    new float[] { 0, 40, 3, 2,2,2,2 },
+    new float[] { 0, 20, 0.1f, 2 },
     new float[] { 1, 20, 0.1f, 0, 0, 0, 0, 0, 0, 0, 0 } // Добавлена запятая
 };
 
