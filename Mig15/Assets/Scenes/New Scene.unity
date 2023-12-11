@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1391,6 +1391,14 @@ PrefabInstance:
       propertyPath: CanvasTypeOfLevel
       value: 
       objectReference: {fileID: 458455710}
+    - target: {fileID: 5421441847822793044, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
+      propertyPath: EnemisPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421441847822793044, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
+      propertyPath: EnemisPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 7193127416440162924, guid: 3ff9f0c22c6614a6f94d34e49dfca7c6, type: 3}
     - target: {fileID: 5767137453453862172, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: m_audioClip
       value: 
