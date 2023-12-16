@@ -67,9 +67,11 @@ public class CoinTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.tag == "bulletPlayer")
         {
             Destroy(gameObject);
+            Debug.Log(gameObject.tag);
         }
     }
 }

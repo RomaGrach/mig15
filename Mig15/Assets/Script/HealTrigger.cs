@@ -28,6 +28,7 @@ public class HealTrigger : MonoBehaviour
     {
         Vector3 curPos = transform.position;
         transform.position = Vector3.MoveTowards(curPos, end, speed*Time.deltaTime);
+
         float rotX = transform.rotation.x;
         float rotY = transform.rotation.y + rotation_speed*multRot;
         float rotZ = transform.rotation.z;

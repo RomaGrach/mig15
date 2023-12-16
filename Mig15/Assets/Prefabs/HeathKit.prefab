@@ -876,10 +876,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linHeal: 1
   multHeal: 1
-  speed: 0
+  speed: 0.1
   rotation_speed: 0.5
   distanceZ: 1
-  pos: {x: 0, y: 100, z: 2}
+  pos: {x: 0, y: 100.08, z: 2}
 --- !u!54 &6113958663303429440
 Rigidbody:
   m_ObjectHideFlags: 0
