@@ -14,8 +14,10 @@ public class EnemyHealth : MonoBehaviour
     public float hp;
     Image healthBar;
     [SerializeField] GameObject Image;
-
+    //[SerializeField] Animator anim;
     [SerializeField] GameObject _bricksEffectPrefab;
+    [SerializeField] GameObject[] _FireEffectPrefab;
+
     private void Start()
     {
 
@@ -27,8 +29,20 @@ public class EnemyHealth : MonoBehaviour
     {
         if (hp <= 0)
         {
+
+            //if (_FireEffectPrefab)
+            //{
+            //    Instantiate(_FireEffectPrefab, transform.position, transform.rotation);
+            //}
+            //if (anim)
+            //{
+                //anim.SetBool("Dead", true);
+            //}
+            //else
+            //{
+                //Die();
+            //}
             
-            Die();
         }
         healthBar.fillAmount = hp / Maxhp;
     }
@@ -44,10 +58,28 @@ public class EnemyHealth : MonoBehaviour
             hp -= other.gameObject.GetComponent<puly>().damage;
             Instantiate(_bricksEffectPrefab, transform.position, transform.rotation);
             Destroy(other.gameObject);
+            if (hp <= 0)
+            {
+                ActivateAllFireEffects();
+            }
         }
     }
 
-    void Die()
+    void ActivateAllFireEffects()
+    {
+        if (_FireEffectPrefab != null)
+        {
+            foreach (GameObject fireEffect in _FireEffectPrefab)
+            {
+                if (fireEffect != null)
+                {
+                    fireEffect.SetActive(true);
+                }
+            }
+        }
+    }
+
+    public void Die()
     {
         GlobalEventManager.SendEnemyKilled();
         FindObjectOfType<ScoreManager>().killedEnemies++;

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GridBrushBase;
 
 public class enemiMouve : MonoBehaviour
 {
@@ -10,6 +11,14 @@ public class enemiMouve : MonoBehaviour
     //public int hp = 3;
     public float zMovementSpeed = 0.1f; // Скорость движения по оси Z
     //[SerializeField] GameObject _bricksEffectPrefab;
+    public bool normalMouve = true;
+    public float moveDownSpeed = 3.0f; // Скорость движения вниз
+    public float moveSidewaysSpeed = 2.0f; // Скорость движения в сторону
+    public float rotationSpeed = 50.0f; // Скорость вращения объекта
+
+    private bool hasRotated = false; // Флаг для определения выполнения однократного вращения
+    private Vector3 rotationDirection; // Направление для однократного вращения
+
 
     private void Start()
     {
@@ -17,6 +26,17 @@ public class enemiMouve : MonoBehaviour
     }
 
     private void Update()
+    {
+        if (normalMouve)
+        {
+            NormalMovement();
+        }
+        else
+        {
+            MoveAndRotate();
+        }
+    }
+    void NormalMovement()
     {
         // Движение объекта в зависимости от переменной "mouve"
         if (mouve == 0)
@@ -55,6 +75,26 @@ public class enemiMouve : MonoBehaviour
         }
         */
     }
+    void MoveAndRotate()
+    {
+        if (!hasRotated)
+        {
+            // Выбор случайного направления для вращения объекта один раз
+            rotationDirection = Random.onUnitSphere;
+            hasRotated = true;
+        }
+
+        // Движение объекта вниз по глобальной оси Y
+        transform.Translate(Vector3.down * moveDownSpeed * Time.deltaTime, Space.World);
+
+        // Движение объекта в сторону по глобальным осям X и Z
+        float moveHorizontal = Input.GetAxis("Horizontal") * moveSidewaysSpeed * Time.deltaTime;
+        transform.Translate(new Vector3(moveHorizontal, 0.0f, 0.0f), Space.World);
+
+        // Применение вращения к объекту по уже определенному направлению
+        transform.Rotate(rotationDirection * rotationSpeed * Time.deltaTime);
+    }
+
     /*
     private void OnTriggerEnter(Collider other)
     {

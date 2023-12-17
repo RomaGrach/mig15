@@ -7,6 +7,10 @@ public class enemiController : MonoBehaviour
     public enemyGoToPosition enemyGoToPosition;
     public enemiMouve enemiMouve;
     public enemiGan enemiGan;
+    public EnemyHealth EnemyHealth;
+    public float timeDead = 5f;
+
+    bool dead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +20,12 @@ public class enemiController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z < 0.001f)
+        if(EnemyHealth.hp < 0)
+        {
+            enemiMouve.normalMouve = false;
+            StartCoroutine(DeadUje(timeDead));
+        }
+        if (transform.position.z < 0.001f && EnemyHealth.hp >0)
         {
             FindObjectOfType<GameManager>().ShowFinishWindowBadEnd();
             // Координата Z меньше нуля
@@ -29,4 +38,15 @@ public class enemiController : MonoBehaviour
             enemiGan.enabled = true;
         }
     }
+    private IEnumerator DeadUje(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+        EnemyHealth.Die();
+    }
+
+    public void DeadAllReady()
+    {
+        dead = true;
+    }
+
 }
