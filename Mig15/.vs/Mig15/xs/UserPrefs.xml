@@ -1,21 +1,17 @@
 ﻿<Properties StartupConfiguration="{882250E1-A6E3-B757-D449-79FA9C3A8500}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GlobalEventManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UpdatesMenuMainScript.cs">
     <Files>
-      <File FileName="Assets/Script/PlayerMouve.cs" />
-      <File FileName="Assets/Script/enemiMouve.cs" />
       <File FileName="Assets/Script/CameraMove.cs" />
       <File FileName="Assets/Script/MainMenu.cs" />
-      <File FileName="Assets/Script/PointerManager.cs" />
-      <File FileName="Assets/Script/EnemyPointer.cs" />
+      <File FileName="Assets/Script/PointerManager.cs" Line="11" Column="1" />
+      <File FileName="Assets/Script/EnemyPointer.cs" Line="9" Column="1" />
       <File FileName="Assets/Script/PauseMenu.cs" />
       <File FileName="Assets/Script/ScoreManager.cs" />
       <File FileName="Assets/Script/PlayerHealthRegen.cs" />
       <File FileName="Assets/Script/LevelTransition.cs" />
       <File FileName="Assets/Script/playerGetDamage.cs" />
       <File FileName="Assets/Script/enemiGan.cs" />
-      <File FileName="Assets/Script/enemiController.cs" />
       <File FileName="Assets/Script/enemyGoToPosition.cs" />
-      <File FileName="Assets/Script/EnemyHealth.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/testHeals.cs" />
       <File FileName="Assets/JMO Assets/Cartoon FX Easy Editor/CartoonFX Easy Editor Readme.txt" />
       <File FileName="Assets/Script/generatorEnemi.cs" />
@@ -24,24 +20,29 @@
       <File FileName="Assets/GlobalEventManager.cs" Line="16" Column="40" />
       <File FileName="Assets/Script/genetator.cs" />
       <File FileName="Assets/GeneratorEnvironmentModified.cs" />
-      <File FileName="Assets/Script/puly.cs" />
+      <File FileName="Assets/Script/puly.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/gunPlayer.cs" />
-      <File FileName="Assets/Script/Progress.cs" Line="42" Column="7" />
-      <File FileName="Assets/GeneratorEnemiModified.cs" Line="127" Column="18" />
-      <File FileName="Assets/StageOptions.cs" Line="20" Column="27" />
-      <File FileName="Assets/Yandex/Pugins/Yandex.cs" Line="10" Column="1" />
-      <File FileName="Assets/Script/CanvasForUpdates.cs" Line="55" Column="17" />
-      <File FileName="Assets/Script/GameManager.cs" Line="24" Column="48" />
-      <File FileName="Assets/Script/HealTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/B29Controller.cs" Line="41" Column="10" />
-      <File FileName="Assets/B25Controller.cs" Line="32" Column="52" />
+      <File FileName="Assets/Script/Progress.cs" />
+      <File FileName="Assets/GeneratorEnemiModified.cs" />
+      <File FileName="Assets/StageOptions.cs" Line="19" Column="41" />
+      <File FileName="Assets/Yandex/Pugins/Yandex.cs" />
+      <File FileName="Assets/Script/CanvasForUpdates.cs" />
+      <File FileName="Assets/Script/GameManager.cs" />
+      <File FileName="Assets/Script/HealTrigger.cs" />
+      <File FileName="Assets/Script/EnemyHealth.cs" Line="19" Column="52" />
+      <File FileName="Assets/Script/enemiMouve.cs" Line="21" Column="1" />
+      <File FileName="Assets/Script/PlayerMouve.cs" Line="73" Column="37" />
+      <File FileName="Assets/Script/enemiController.cs" Line="11" Column="32" />
+      <File FileName="Assets/Script/B29Controller.cs" Line="53" Column="6" />
+      <File FileName="Assets/B25Controller.cs" Line="46" Column="6" />
+      <File FileName="Assets/UpdatesMenuMainScript.cs" Line="21" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cb226eed-1368-4d22-bd1d-38255bb09894" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d548f049-d693-460e-888b-ff3c8f17f250" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
 </Properties>

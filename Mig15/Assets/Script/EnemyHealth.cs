@@ -29,20 +29,20 @@ public class EnemyHealth : MonoBehaviour
     {
         if (hp <= 0)
         {
-
+            
             //if (_FireEffectPrefab)
             //{
             //    Instantiate(_FireEffectPrefab, transform.position, transform.rotation);
             //}
             //if (anim)
             //{
-                //anim.SetBool("Dead", true);
+            //anim.SetBool("Dead", true);
             //}
             //else
             //{
-                //Die();
+            //Die();
             //}
-            
+
         }
         healthBar.fillAmount = hp / Maxhp;
     }
@@ -60,6 +60,7 @@ public class EnemyHealth : MonoBehaviour
             Destroy(other.gameObject);
             if (hp <= 0)
             {
+                
                 ActivateAllFireEffects();
             }
         }
