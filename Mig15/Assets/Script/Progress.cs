@@ -13,12 +13,16 @@ public class PlayerInfo
     public int Flight = 0;
     public float MaxHP = 5;
     public float Damage = 2;
+    public float Armor = 1;
     public float TimeBetwinShots = 0.5f;
     public float TimeBetwinShots37 = 2f;
     public int Level = 0;
     public float Hprice = 5;
     public float Dprice = 5;
+    public float Aprice = 5;
     public float Sprice = 5;
+    public float S23price = 5;
+    public float S37price = 5;
 }
 
 public class Progress : MonoBehaviour
