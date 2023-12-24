@@ -63,7 +63,9 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
+    - e097ee60c6c33424f9e3b905d437e5ef: 21300000
     - 8b9e5f90dfebddd4881d67c0b72c148f: 21300000
+    - e1ae0fa0f4d6c9d46a92f4b71509bf7f: 21300000
     - 8ba0b9f0579efba4ea018c34adfeb0af: 21300000
     - fc52c9f0483a44f4f9b7b5829cf48f69: 21300000
     - 495db621dc391e74f887016507d16503: 21300000
@@ -75,6 +77,7 @@ SpriteAtlas:
     - 85fb9b42d5a50da49b7a022fc50a7443: 21300000
     - 5a23f552b8be72b4aaccf814c11edc84: 21300000
     - b2995662341f070489d465b1ab0a21b8: 21300000
+    - 4774529292aa5e54c992c0c8d1a72021: 21300000
     - d30021e25afb9214f9de3c874f3e5e34: 21300000
     - d90a37e2a65bbea4e83ec4162d2163bc: 21300000
     - f9988f43eb17d1c468c45e73f013aece: 21300000
@@ -83,6 +86,7 @@ SpriteAtlas:
     - 6265cc1433bfb68419c4d181e359d3b0: 21300000
     - eab28f3481aaa424b9c4f5fb07547f9a: 21300000
     - 8ecf45a45f17a8944ae99a03e44eb65f: 21300000
+    - e147d7251e015cc45abcb2c8c5b1aee6: 21300000
     - 7ea8e1d5025f9f747ac94b1432fa5a74: 21300000
     - af831a16d1f6b03418a3261df1392f4c: 21300000
     - 4d841146e1f3fad448ad8643345461a0: 21300000
@@ -109,6 +113,7 @@ SpriteAtlas:
     - 00567c5b2395d0341bbef4b6b98a9205: 21300000
     - 30f9601c957918b44a8e2cdfb15d9e3e: 21300000
     - b59fa1accadf7e541b31f28fde2fc1a9: 21300000
+    - 8336f5bc3cec5ad4cb053e930dfe2891: 21300000
     - 9cdbc1dc9789e5144bd5ab98c05e63e2: 21300000
     - 9f3850bd11757da4fb06c4258f5183f3: 21300000
     - c5911dbdd7cc20e4990011f22811df21: 21300000
@@ -122,7 +127,9 @@ SpriteAtlas:
     - 5fa08def52db8c143be52391ae24e40b: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: e097ee60c6c33424f9e3b905d437e5ef, type: 3}
   - {fileID: 21300000, guid: 8b9e5f90dfebddd4881d67c0b72c148f, type: 3}
+  - {fileID: 21300000, guid: e1ae0fa0f4d6c9d46a92f4b71509bf7f, type: 3}
   - {fileID: 21300000, guid: 8ba0b9f0579efba4ea018c34adfeb0af, type: 3}
   - {fileID: 21300000, guid: fc52c9f0483a44f4f9b7b5829cf48f69, type: 3}
   - {fileID: 21300000, guid: 495db621dc391e74f887016507d16503, type: 3}
@@ -134,6 +141,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 85fb9b42d5a50da49b7a022fc50a7443, type: 3}
   - {fileID: 21300000, guid: 5a23f552b8be72b4aaccf814c11edc84, type: 3}
   - {fileID: 21300000, guid: b2995662341f070489d465b1ab0a21b8, type: 3}
+  - {fileID: 21300000, guid: 4774529292aa5e54c992c0c8d1a72021, type: 3}
   - {fileID: 21300000, guid: d30021e25afb9214f9de3c874f3e5e34, type: 3}
   - {fileID: 21300000, guid: d90a37e2a65bbea4e83ec4162d2163bc, type: 3}
   - {fileID: 21300000, guid: f9988f43eb17d1c468c45e73f013aece, type: 3}
@@ -142,6 +150,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6265cc1433bfb68419c4d181e359d3b0, type: 3}
   - {fileID: 21300000, guid: eab28f3481aaa424b9c4f5fb07547f9a, type: 3}
   - {fileID: 21300000, guid: 8ecf45a45f17a8944ae99a03e44eb65f, type: 3}
+  - {fileID: 21300000, guid: e147d7251e015cc45abcb2c8c5b1aee6, type: 3}
   - {fileID: 21300000, guid: 7ea8e1d5025f9f747ac94b1432fa5a74, type: 3}
   - {fileID: 21300000, guid: af831a16d1f6b03418a3261df1392f4c, type: 3}
   - {fileID: 21300000, guid: 4d841146e1f3fad448ad8643345461a0, type: 3}
@@ -168,6 +177,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 00567c5b2395d0341bbef4b6b98a9205, type: 3}
   - {fileID: 21300000, guid: 30f9601c957918b44a8e2cdfb15d9e3e, type: 3}
   - {fileID: 21300000, guid: b59fa1accadf7e541b31f28fde2fc1a9, type: 3}
+  - {fileID: 21300000, guid: 8336f5bc3cec5ad4cb053e930dfe2891, type: 3}
   - {fileID: 21300000, guid: 9cdbc1dc9789e5144bd5ab98c05e63e2, type: 3}
   - {fileID: 21300000, guid: 9f3850bd11757da4fb06c4258f5183f3, type: 3}
   - {fileID: 21300000, guid: c5911dbdd7cc20e4990011f22811df21, type: 3}
@@ -180,7 +190,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f92d6edf6cac5e045bd16c4b5005ecfb, type: 3}
   - {fileID: 21300000, guid: 5fa08def52db8c143be52391ae24e40b, type: 3}
   m_PackedSpriteNamesToIndex:
+  - icons4-01
   - SVODKA-HISTORY-1-01 1
+  - buttons_menu2-01
   - tt
   - game overtext-01
   - "\u044F\u0447\u0435\u0439\u043A\u0430 \u0432\u044B\u0431\u043E\u0440\u0430 \u043C\u043E\u0434\u0443\u043B\u044F-01"
@@ -192,6 +204,7 @@ SpriteAtlas:
   - "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u044F-01"
   - MAP-01
   - part 2
+  - icons3-01
   - texture_menu
   - wintext-01-01
   - "\u0430\u044D\u0440\u043E\u0434\u0440\u043E\u043C \u0441\u0442\u0430\u0442\u0438\u043A\u0430
@@ -201,6 +214,7 @@ SpriteAtlas:
   - "\u043B\u043E\u0433\u043E\u0442\u0438\u043F-01"
   - SVODKA-redux-01
   - money-01
+  - icons2-01
   - map table
   - buttons_menu-01
   - map usvyaty
@@ -227,6 +241,7 @@ SpriteAtlas:
   - "\u041F\u0430\u0443\u0437\u0430-01"
   - game over-01 1
   - map zapolarye
+  - icons1-01
   - "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u044F1-01"
   - SVODKA-HISTORY-2-01 1
   - img2-01

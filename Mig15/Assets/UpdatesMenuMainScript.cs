@@ -26,6 +26,7 @@ public class UpdatesMenuMainScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(Progress.Instance.PlayerInfo.Coins.ToString());
         TextMoney.text = Progress.Instance.PlayerInfo.Coins.ToString();
     }
     
@@ -49,49 +50,49 @@ public class UpdatesMenuMainScript : MonoBehaviour
     {
         if (NowUpdate == 0)
         {
-            if(Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.Hprice * priseIndex)
+            if(Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.Hprice)
             {
-                Progress.Instance.PlayerInfo.Hprice *= priseIndex;
-                Progress.Instance.PlayerInfo.MaxHP *= UpdateIndex;
-                Debug.Log((int)(Progress.Instance.PlayerInfo.Hprice * priseIndex));
-                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.Hprice * priseIndex);
+                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.Hprice);
+                Progress.Instance.PlayerInfo.Hprice += priseIndex;
+                Progress.Instance.PlayerInfo.MaxHP += UpdateIndex;
+                
             }
             
         }
         else if (NowUpdate == 1)
         {
-            if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.Dprice * priseIndex)
+            if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.Dprice)
             {
-                Progress.Instance.PlayerInfo.Dprice *= priseIndex;
-                Progress.Instance.PlayerInfo.Damage *= UpdateIndex;
-                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.Dprice * priseIndex);
+                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.Dprice);
+                Progress.Instance.PlayerInfo.Dprice += priseIndex;
+                Progress.Instance.PlayerInfo.Damage += UpdateIndex;
             }
         }
         else if (NowUpdate == 2)
         {
-            if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.Aprice * priseIndex)
+            if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.Aprice)
             {
-                Progress.Instance.PlayerInfo.Aprice *= priseIndex;
-                Progress.Instance.PlayerInfo.Armor *= UpdateIndex;
-                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.Aprice * priseIndex);
+                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.Aprice);
+                Progress.Instance.PlayerInfo.Aprice += priseIndex;
+                Progress.Instance.PlayerInfo.Armor += UpdateIndex;
             }
         }
         else if (NowUpdate == 3)
         {
-            if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.S23price * priseIndex)
+            if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.S23price)
             {
-                Progress.Instance.PlayerInfo.S23price *= priseIndex;
-                Progress.Instance.PlayerInfo.TimeBetwinShots *= (UpdateIndex-1);
-                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S23price * priseIndex);
+                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S23price);
+                Progress.Instance.PlayerInfo.S23price += priseIndex;
+                Progress.Instance.PlayerInfo.TimeBetwinShots -= 0.1f;
             }
         }
         else if (NowUpdate == 4)
         {
-            if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.S37price * priseIndex)
+            if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.S37price)
             {
-                Progress.Instance.PlayerInfo.S37price *= priseIndex;
-                Progress.Instance.PlayerInfo.TimeBetwinShots37 *= (UpdateIndex - 1);
-                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S37price * priseIndex);
+                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S37price);
+                Progress.Instance.PlayerInfo.S37price += priseIndex;
+                Progress.Instance.PlayerInfo.TimeBetwinShots37 -= 0.1f;
             }
         }
     }
@@ -103,27 +104,32 @@ public class UpdatesMenuMainScript : MonoBehaviour
         string value = "";
 
         if (a == 0){
-            prise = (priseIndex * Progress.Instance.PlayerInfo.Hprice).ToString();
+            prise = (Progress.Instance.PlayerInfo.Hprice).ToString();
             value = (Progress.Instance.PlayerInfo.MaxHP).ToString();
             Debug.Log(Progress.Instance.PlayerInfo.Hprice+"_____");
         }
         else if (a == 1){
-            prise = (priseIndex * Progress.Instance.PlayerInfo.Dprice).ToString();
+            prise = (Progress.Instance.PlayerInfo.Dprice).ToString();
             value = (Progress.Instance.PlayerInfo.Damage).ToString();
         }
         else if(a == 2){
-            prise = (priseIndex * Progress.Instance.PlayerInfo.Aprice).ToString();
+            prise = (Progress.Instance.PlayerInfo.Aprice).ToString();
             value = (Progress.Instance.PlayerInfo.Armor).ToString();
         }
         else if(a == 3){
-            prise = (priseIndex * Progress.Instance.PlayerInfo.S23price).ToString();
+            prise = (Progress.Instance.PlayerInfo.S23price).ToString();
             value = (Progress.Instance.PlayerInfo.TimeBetwinShots).ToString();
         }
         else if(a == 4){
-            prise = (priseIndex * Progress.Instance.PlayerInfo.S37price).ToString();
+            prise = (Progress.Instance.PlayerInfo.S37price).ToString();
             value = (Progress.Instance.PlayerInfo.TimeBetwinShots37).ToString();
         }
         TextDescription.text = "Стоимость улучшения: " + prise + "\n"+"Текущие значение: "+ value + "\n" + description[a];
     }
-    
+
+    public void Reset()
+    {
+        Progress.Instance.resetProgress();
+    }
+
 }
