@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(Progress.Instance.PlayerDidSomething && Progress.Instance.PlayerFirstGame)
+        {
+            Progress.Instance.PlayerFirstGame = false;
+            ShowAdv(); //метод для вызова рекламы
+        }
         //ShowAdv();   метод для вызова рекламы
         _LevelText.text = SceneManager.GetActiveScene().name;
         _startMenu.SetActive(true);
@@ -44,12 +49,14 @@ public class GameManager : MonoBehaviour
         _finishWindow.SetActive(true);
         _finishWindowBad.SetActive(true);
         win = false;
+        ShowAdv(); //метод для вызова рекламы
     }
     public void ShowFinishWindowGoodEnd()
     {
         _finishWindow.SetActive(true);
         _finishWindowGood.SetActive(true);
         win = true;
+        ShowAdv(); //метод для вызова рекламы
     }
     public void NextLevel()
     {
