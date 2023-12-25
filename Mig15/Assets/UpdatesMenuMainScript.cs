@@ -10,7 +10,11 @@ public class UpdatesMenuMainScript : MonoBehaviour
     float priseIndex = 1.5f;
     float UpdateIndex = 1.5f;
     int NowUpdate = -1;
-
+    string[] descriptionname = new string[]
+    {
+        "Улучшение/Здоровье","Улучшение/Урон","Улучшение/Броня","Улучшение/Пушка 23мм"
+        ,"Улучшение/Пушка 37мм"
+    };
     string[] description = new string[]
     {
         "Увеличивает здоровье","Увеличивает урон","Увеличивает броню","Увеличивает скорострельность 23мм пушки"
@@ -124,7 +128,7 @@ public class UpdatesMenuMainScript : MonoBehaviour
             prise = (Progress.Instance.PlayerInfo.S37price).ToString();
             value = (Progress.Instance.PlayerInfo.TimeBetwinShots37).ToString();
         }
-        TextDescription.text = "Стоимость улучшения: " + prise + "\n"+"Текущие значение: "+ value + "\n" + description[a];
+        TextDescription.text = descriptionname[a]+ "\n" + "Стоимость улучшения: " + prise + "\n"+"Текущие значение: "+ value + "\n" + description[a];
     }
 
     public void Reset()
