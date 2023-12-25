@@ -36,6 +36,7 @@ public class Progress : MonoBehaviour
     public PlayerInfo PlayerInfo;
     public bool Yandex = false;
     public bool Test = false;
+    public bool PlayerDidSomething = false;
 
     private void Awake()
     {
@@ -54,7 +55,7 @@ public class Progress : MonoBehaviour
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
             Instance = this;
-            StartCoroutine(WaitTime());
+            //StartCoroutine(WaitTime());
         }
         else
         {

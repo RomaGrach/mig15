@@ -13,4 +13,14 @@ public class MainMenu : MonoBehaviour
         Debug.Log("off");
         Application.Quit();
     }
+    public void ThePlayerDidSomething()
+    {
+        if (!Progress.Instance.PlayerDidSomething)
+        {
+            Progress.Instance.DownloadProgress();
+            Progress.Instance.PlayerDidSomething = true;
+        }
+        
+    }
+
 }
