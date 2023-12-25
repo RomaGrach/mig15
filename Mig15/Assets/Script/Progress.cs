@@ -37,6 +37,7 @@ public class Progress : MonoBehaviour
     public bool Yandex = false;
     public bool Test = false;
     public bool PlayerDidSomething = false;
+    public bool PlayerFirstGame = true;
 
     private void Awake()
     {
