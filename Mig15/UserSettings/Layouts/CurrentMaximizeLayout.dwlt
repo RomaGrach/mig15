@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 10415
+  controlID: 11113
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 10356
+  controlID: 11171
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 10357
+  controlID: 11220
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,8 +194,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 26eff7ff
-      m_LastClickedID: -528602
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: 26eff7ff28f0f7ffdef0f7ffc6faf7ff3c99ffff8099ffff8299ffff9a9fffff2afbfffff09f0100aca40100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -906,7 +906,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -914,16 +914,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Script
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/romagrachev/mig15Work/Mig15
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 234}
-    m_SelectedIDs: 92ff0000
-    m_LastClickedID: 65426
-    m_ExpandedIDs: 000000008e790000168b0000188b00001a8b00001c8b00001e8b0000208b0000228b00000cf400007eff00008cff00000a0001002a00010000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 0cf40000
+    m_LastClickedID: 62476
+    m_ExpandedIDs: 000000008e790000168b0000188b00001a8b00001c8b00001e8b0000208b0000228b00007eff00008cff00000a0001002a00010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -976,8 +976,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 26eff7ff
-    m_LastClickedInstanceID: -528602
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -1201,15 +1201,15 @@ MonoBehaviour:
     y: 0
     width: 332
     height: 719
-  m_MinSize: {x: 641, y: 601}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 640, y: 580}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
   - {fileID: 16}
   - {fileID: 17}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52

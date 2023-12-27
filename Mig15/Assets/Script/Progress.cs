@@ -160,7 +160,7 @@ public class Progress : MonoBehaviour
     {
         Time.timeScale = 1f;
         AudioListener.volume = 1f;
-        ShowAdv();
+        
     }
 
 
