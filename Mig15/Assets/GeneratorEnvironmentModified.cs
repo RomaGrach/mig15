@@ -34,6 +34,9 @@ public class GeneratorEnvironmentModified : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int a = Random.Range(0, 2) *2;
+        Debug.Log(a);
+        TypeOfEnvironment = a;
         TransferEnvironmentTypes(EnvironmentTypes);
         StartChangeEnvironment();
         Play();

@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [DllImport("__Internal")]
-    private static extern void ShowAdv();
+    
     [SerializeField] private GameObject _startMenu;
     [SerializeField] TextMeshProUGUI _LevelText;
     [SerializeField] GameObject _finishWindow;
@@ -24,7 +23,8 @@ public class GameManager : MonoBehaviour
         if(Progress.Instance.PlayerDidSomething && Progress.Instance.PlayerFirstGame)
         {
             Progress.Instance.PlayerFirstGame = false;
-            ShowAdv(); //метод для вызова рекламы
+            Progress.Instance.PlayAdv();
+            
         }
         //ShowAdv();   метод для вызова рекламы
         _LevelText.text = SceneManager.GetActiveScene().name;
@@ -49,14 +49,14 @@ public class GameManager : MonoBehaviour
         _finishWindow.SetActive(true);
         _finishWindowBad.SetActive(true);
         win = false;
-        ShowAdv(); //метод для вызова рекламы
+        
     }
     public void ShowFinishWindowGoodEnd()
     {
         _finishWindow.SetActive(true);
         _finishWindowGood.SetActive(true);
         win = true;
-        ShowAdv(); //метод для вызова рекламы
+        
     }
     public void NextLevel()
     {

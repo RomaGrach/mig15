@@ -16,6 +16,13 @@ public class MainMenu : MonoBehaviour
         Debug.Log("off");
         Application.Quit();
     }
+    private void Start()
+    {
+        if (Progress.Instance.PlayerDidSomething)
+        {
+            Progress.Instance.PlayAdv();
+        }
+    }
     public void ThePlayerDidSomething()
     {
         
@@ -23,10 +30,6 @@ public class MainMenu : MonoBehaviour
         {
             Progress.Instance.DownloadProgress();
             Progress.Instance.PlayerDidSomething = true;
-        }
-        else
-        {
-            ShowAdv(); //метод для вызова рекламы
         }
         
     }

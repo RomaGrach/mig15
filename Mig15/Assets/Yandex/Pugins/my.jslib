@@ -21,6 +21,7 @@ mergeInto(LibraryManager.library, {
         ysdk.adv.showFullscreenAdv({
     callbacks: {
         onClose: function(wasShown) {
+            myGameInstance.SendMessage('Progress', 'StopAdv');
             console.Log ("__----------- closed-----------");
           // some action after close
         },

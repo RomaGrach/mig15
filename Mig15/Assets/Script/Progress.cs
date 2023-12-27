@@ -28,6 +28,8 @@ public class PlayerInfo
 public class Progress : MonoBehaviour
 {
     [DllImport("__Internal")]
+    private static extern void ShowAdv();
+    [DllImport("__Internal")]
     private static extern void SaveExtern(string date);
     [DllImport("__Internal")]
     private static extern void LoadExtern();
@@ -146,5 +148,20 @@ public class Progress : MonoBehaviour
     {
         PlayerInfo = JsonUtility.FromJson<PlayerInfo>(value);
     }
+
+    public void PlayAdv()
+    {
+        Time.timeScale = 0f;
+        AudioListener.volume = 0f;
+        ShowAdv();
+    }
+
+    public void StopAdv()
+    {
+        Time.timeScale = 1f;
+        AudioListener.volume = 1f;
+        ShowAdv();
+    }
+
 
 }
