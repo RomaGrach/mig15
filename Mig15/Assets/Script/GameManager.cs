@@ -20,13 +20,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Progress.Instance.PlayerDidSomething && Progress.Instance.PlayerFirstGame)
+        if(Progress.Instance.PlayerFirstGame)
         {
             Progress.Instance.PlayerFirstGame = false;
             Progress.Instance.PlayAdv();
             
         }
-        //ShowAdv();   метод для вызова рекламы
+        
         _LevelText.text = SceneManager.GetActiveScene().name;
         _startMenu.SetActive(true);
     }
