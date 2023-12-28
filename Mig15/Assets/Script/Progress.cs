@@ -151,9 +151,12 @@ public class Progress : MonoBehaviour
 
     public void PlayAdv()
     {
-        Time.timeScale = 0f;
-        AudioListener.volume = 0f;
-        ShowAdv();
+        if (Yandex)
+        {
+            Time.timeScale = 0f;
+            AudioListener.volume = 0f;
+            ShowAdv();
+        }
     }
 
     public void StopAdv()
