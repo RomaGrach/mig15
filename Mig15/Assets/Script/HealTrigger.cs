@@ -34,7 +34,7 @@ public class HealTrigger : MonoBehaviour
         float rotZ = transform.rotation.z;
         transform.rotation = Quaternion.Euler(rotX, rotY, rotZ);
         multRot += 1f;
-        if (transform.position.z < 0f)
+        if (transform.position.z < -2f)
         {
             Destroy(gameObject);
         }
@@ -43,15 +43,16 @@ public class HealTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-
+        Debug.Log("Collision Detected");
         if (other.gameObject.tag == "Player")
         {
+            Debug.Log("Player Detected");
             float HP = other.gameObject.GetComponent<playerGetDamage>().hp;
             float MHP = other.gameObject.GetComponent<playerGetDamage>().Maxhp;
             HP += linHeal*multHeal;
             if (HP > MHP)
             {
-                HP = MHP;
+                other.gameObject.GetComponent<playerGetDamage>().hp = MHP;
             }
             other.gameObject.GetComponent<playerGetDamage>().hp = HP;
             Destroy(gameObject);

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1905380306965947518}
   m_Layer: 0
   m_Name: PlayerPlayen
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,6 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LinDamage: 0
+  LinDamage37: 2
   MultDamage: 1
   bullet: {fileID: 8268627351118764441, guid: df8be8639cbd94161b7a0bd412e99498, type: 3}
   bullet37: {fileID: 8268627351118764441, guid: 12c77c5a07c6d42568974840cbf7f14f, type: 3}

@@ -861,7 +861,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 7, y: 10, z: 7}
-  m_Center: {x: 0, y: 5, z: 0}
+  m_Center: {x: 0, y: 4, z: 0}
 --- !u!114 &2026634614262279346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,7 +879,7 @@ MonoBehaviour:
   speed: 0.1
   rotation_speed: 0.5
   distanceZ: 1
-  pos: {x: 0, y: 100.08, z: 2}
+  pos: {x: 0, y: 100.06, z: 2}
 --- !u!54 &6113958663303429440
 Rigidbody:
   m_ObjectHideFlags: 0
