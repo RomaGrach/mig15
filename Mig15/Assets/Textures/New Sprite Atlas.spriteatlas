@@ -102,6 +102,7 @@ SpriteAtlas:
     - 05b0e727f5606d74780eac4e266b646f: 21300000
     - 3a633e47f74ed7d4c9d0bfa11be95ce8: 21300000
     - d2d66377fe9f3204380c6fbd219f6ef0: 21300000
+    - d0220e77a3611f147bf78187381fa6eb: 21300000
     - 3c7a0bc74097b6648bb455edbd150257: 21300000
     - a16689e7f8704554996abd692dd94a9e: 21300000
     - ffd5bdf79bb26024c82909d5e135b053: 21300000
@@ -178,6 +179,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 05b0e727f5606d74780eac4e266b646f, type: 3}
   - {fileID: 21300000, guid: 3a633e47f74ed7d4c9d0bfa11be95ce8, type: 3}
   - {fileID: 21300000, guid: d2d66377fe9f3204380c6fbd219f6ef0, type: 3}
+  - {fileID: 21300000, guid: d0220e77a3611f147bf78187381fa6eb, type: 3}
   - {fileID: 21300000, guid: 3c7a0bc74097b6648bb455edbd150257, type: 3}
   - {fileID: 21300000, guid: a16689e7f8704554996abd692dd94a9e, type: 3}
   - {fileID: 21300000, guid: ffd5bdf79bb26024c82909d5e135b053, type: 3}
@@ -254,6 +256,7 @@ SpriteAtlas:
   - basic-01
   - "\u041C\u043E\u0434\u0443\u043B\u0438-01"
   - SVODKA-HISTORY-1-01
+  - list_3m-01
   - img1-01
   - "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438-01"
   - SVODKA-01

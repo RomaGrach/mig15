@@ -191,7 +191,7 @@ public class GeneratorEnemiModified : MonoBehaviour
     {
         if (TipeOfStage[TOS] == 0)
         {
-            TextTypeOfLevel.text = "Уничтож врагов за: " + TimeBetweenStages[TOS].ToString() + "c";
+            TextTypeOfLevel.text = "Уничтожь врагов за: " + TimeBetweenStages[TOS].ToString() + "c";
             StartBar = TimeBetweenStages[TOS];
             Bar = StartBar;
             flagForBar1 = true;
@@ -199,7 +199,7 @@ public class GeneratorEnemiModified : MonoBehaviour
         else if (TipeOfStage[TOS] == 1)
         {
             StartBar = (float)BS[TOS].Length;
-            TextTypeOfLevel.text = "Уничтож " + BS[TOS].Length.ToString() + " врагов";
+            TextTypeOfLevel.text = "Уничтожь " + BS[TOS].Length.ToString() + " врагов";
             Bar = StartBar;
             flagForBar1 = false;
         }
