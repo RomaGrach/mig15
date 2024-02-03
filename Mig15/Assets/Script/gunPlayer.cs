@@ -48,16 +48,19 @@ public class gunPlayer : MonoBehaviour
         {
             if (timeBtwShots <= 0)
             {
-                bullet.GetComponent<puly>().damage = (LinDamage + bullet.GetComponent<puly>().damage) * MultDamage;
+                float oldDamage = bullet.GetComponent<puly>().damage;
+                bullet.GetComponent<puly>().damage = (LinDamage + oldDamage) * MultDamage;
                 Instantiate(bullet, shotPointL.position, shotPointL.rotation);
                 Instantiate(bullet, shotPointR.position, shotPointR.rotation);
+                bullet.GetComponent<puly>().damage = oldDamage;
                 timeBtwShots = startTimeBtwShots;
             }
             if (timeBtwShots37 <= 0)
             {
-
-                bullet37.GetComponent<puly>().damage = (LinDamage37 + bullet.GetComponent<puly>().damage) * MultDamage;
+                float oldDamage = bullet37.GetComponent<puly>().damage;
+                bullet37.GetComponent<puly>().damage = (LinDamage37 + oldDamage) * MultDamage;
                 Instantiate(bullet37, shotPoint37mm.position, shotPoint37mm.rotation);
+                bullet37.GetComponent<puly>().damage = oldDamage;
                 timeBtwShots37 = startTimeBtwShots37;
             }
 
