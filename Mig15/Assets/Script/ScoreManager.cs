@@ -22,14 +22,14 @@ public class ScoreManager : MonoBehaviour
         {
             // Обновите текстовое поле с текущим количеством убитых врагов
             ScoreText.text = " " + killedEnemies.ToString();
-            ScoreTextEnd.text = "Убито: " + killedEnemies.ToString();
+            ScoreTextEnd.text =  killedEnemies.ToString();
         }
         if (flag)
         {
             if (CanvasFinish.activeSelf == true) // проверка на то что объект активен
             {
                 endMoney = (int)(killedEnemies * 1.2); // endMoney должнобыть целое число
-                MoneyTextEnd.text = "Заработанно: " + endMoney.ToString();
+                MoneyTextEnd.text = "+" + endMoney.ToString();
                 Progress.Instance.PlayerInfo.Coins += endMoney;
                 Progress.Instance.PlayerInfo.Killed += killedEnemies;
                 Progress.Instance.PlayerInfo.Flight += 1;

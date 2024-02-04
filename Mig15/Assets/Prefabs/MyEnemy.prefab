@@ -508,8 +508,8 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls: []
-  Maxhp: 3
-  hp: 3
+  Maxhp: 10
+  hp: 5
   Image: {fileID: 5528090845322958337}
   _bricksEffectPrefab: {fileID: 159975523383020488, guid: cf022d104ac504779b9cef2cc9f4e778, type: 3}
   _FireEffectPrefab:
