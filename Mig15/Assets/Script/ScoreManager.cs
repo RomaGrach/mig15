@@ -21,15 +21,15 @@ public class ScoreManager : MonoBehaviour
         if (ScoreText != null)
         {
             // Обновите текстовое поле с текущим количеством убитых врагов
-            ScoreText.text = " " + killedEnemies.ToString();
-            ScoreTextEnd.text =  killedEnemies.ToString();
+            ScoreText.text =  killedEnemies.ToString();
+            ScoreTextEnd.text = "Уничтожено: " + killedEnemies.ToString();
         }
         if (flag)
         {
             if (CanvasFinish.activeSelf == true) // проверка на то что объект активен
             {
                 endMoney = (int)(killedEnemies * 1.2); // endMoney должнобыть целое число
-                MoneyTextEnd.text = "+" + endMoney.ToString();
+                MoneyTextEnd.text = "Жетоны: +" + endMoney.ToString();
                 Progress.Instance.PlayerInfo.Coins += endMoney;
                 Progress.Instance.PlayerInfo.Killed += killedEnemies;
                 Progress.Instance.PlayerInfo.Flight += 1;
