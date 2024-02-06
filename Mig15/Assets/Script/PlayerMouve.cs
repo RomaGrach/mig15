@@ -10,24 +10,31 @@ public class PlayerMouve : MonoBehaviour
     private bool isMovingRight = false;
     private int first = 0;
     [SerializeField] Animator anim;
+    public bool mobile = true;
+    public FloatingJoystick FJ;
     //public GameObject playerplain; // Ссылка на объект, который выполняет анимацию
     //private Animator anim;
 
 
     void Update()
     {
+
+        //FJ.resetJostic(); для сброса джостика
+        
+
+
         bool left = false;
         bool right = false;
 
-        if ((isMovingLeft || Input.GetKey(KeyCode.A)))
+        if ((isMovingLeft || Input.GetKey(KeyCode.A) || (FJ.Horizontal <0)))
         {
             left = true;
         }
-        if (isMovingRight || Input.GetKey(KeyCode.D))
+        if (isMovingRight || Input.GetKey(KeyCode.D) || (FJ.Horizontal > 0))
         {
             right = true;
         }
-        
+
         if (left && !right)
         {
             first = -1;
@@ -35,14 +42,14 @@ public class PlayerMouve : MonoBehaviour
             anim.SetBool("left", true);
             MoveObject(-1f);
         }
-        else if(!left && right)
+        else if (!left && right)
         {
             first = 1;
             clearAnim();
             anim.SetBool("right", true);
             MoveObject(1f);
         }
-        else if(left && right)
+        else if (left && right)
         {
             if (first == -1)
             {
@@ -66,6 +73,7 @@ public class PlayerMouve : MonoBehaviour
         Vector3 newPosition = transform.position;
         newPosition.x = Mathf.Clamp(newPosition.x, -3f, 3f);
         transform.position = newPosition;
+        
     }
 
     public void clearAnim()
