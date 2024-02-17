@@ -553,6 +553,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPlayen
       objectReference: {fileID: 0}
+    - target: {fileID: 2846604377958365744, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
+      propertyPath: m_Volume
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846604377958365744, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 43fb3db265ff2e241a5a4a85b8a22b3b, type: 3}
     - target: {fileID: 3071682875070443703, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1821,7 +1829,7 @@ PrefabInstance:
     - target: {fileID: 3446915001914936010, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 194aa38a1b6d0a8499ab253a27361ffd, type: 3}
+      objectReference: {fileID: 21300000, guid: f1d2308658e61314db3487dd8c7a1596, type: 3}
     - target: {fileID: 3446915001914936010, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
       propertyPath: m_UseSpriteMesh
       value: 0
@@ -1841,7 +1849,7 @@ PrefabInstance:
     - target: {fileID: 3619507731069091586, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 30f9601c957918b44a8e2cdfb15d9e3e, type: 3}
+      objectReference: {fileID: 21300000, guid: ee7021e3a38fdba4eb7edc9d4e651265, type: 3}
     - target: {fileID: 3619507731069091586, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
       propertyPath: m_UseSpriteMesh
       value: 0
@@ -4529,7 +4537,7 @@ PrefabInstance:
     - target: {fileID: 5767137453453862172, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 4d1172a9b4222114881ca390a5594403, type: 3}
+      objectReference: {fileID: 8300000, guid: 184fedbad0d56954eaaab2d029639f50, type: 3}
     - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: TypeOfEnvironment
       value: 0
