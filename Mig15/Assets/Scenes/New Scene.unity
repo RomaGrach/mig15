@@ -4534,6 +4534,18 @@ PrefabInstance:
       propertyPath: TypeOfEnvironment
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
+      propertyPath: EnvironmentTypes.WinterFields.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
+      propertyPath: EnvironmentTypes.WinterFields.Array.data[0]
+      value: 
+      objectReference: {fileID: 4087220597483258285, guid: c587c473f164ae74982981eb92884fb7, type: 3}
+    - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
+      propertyPath: EnvironmentTypes.WinterFields.Array.data[1]
+      value: 
+      objectReference: {fileID: 5308482693159681832, guid: 1640b687ba8994c1ba41153046fd2701, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
