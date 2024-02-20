@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2884261603329920498}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1000, y: 30, z: 18}
+  m_LocalPosition: {x: -971, y: -1, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -59,7 +59,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 74cd5a744e8c60c4eb82ea33bed8752a, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -90,7 +90,7 @@ TerrainCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: f10616485357c407a811c21477740e82, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 21d9463e031794d4cbd4dbaba0d87e81, type: 2}
   m_EnableTreeColliders: 1
 --- !u!1 &5759975859013504077
 GameObject:
@@ -119,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 5759975859013504077}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 759, y: 31, z: 0}
+  m_LocalPosition: {x: 947, y: 6, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -151,7 +151,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 74cd5a744e8c60c4eb82ea33bed8752a, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -182,7 +182,7 @@ TerrainCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 18bb6114d60a24a679c96ad9715dd41d, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: d046097f7e2f35c4787ff50762cb30e9, type: 2}
   m_EnableTreeColliders: 1
 --- !u!1 &6596112574962915948
 GameObject:
@@ -211,7 +211,7 @@ Transform:
   m_GameObject: {fileID: 6596112574962915948}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2000, y: 29, z: 22.7}
+  m_LocalPosition: {x: -1954, y: -4, z: 18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,7 +243,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 496eae874e652fb43849e678c512fddd, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -274,7 +274,7 @@ TerrainCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: cbefde070ef644794ba310cca5d92b64, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: dff3384c093cb4f4cbc967b7cc67a168, type: 2}
   m_EnableTreeColliders: 1
 --- !u!1 &8089527271933363360
 GameObject:
@@ -409,7 +409,7 @@ Transform:
   m_GameObject: {fileID: 8237159691924086510}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -22, z: 1000}
+  m_LocalPosition: {x: 0, y: 9, z: 764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -444,7 +444,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 496eae874e652fb43849e678c512fddd, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -475,7 +475,7 @@ TerrainCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 0e61542c5777a4ac096f599d0717d0f2, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 0819be88b01a78a42aa921cf2661b9a2, type: 2}
   m_EnableTreeColliders: 1
 --- !u!1 &8837462066831144926
 GameObject:
