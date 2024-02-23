@@ -4548,7 +4548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: TimeBetweenGenerations
-      value: 4.2
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: DistantLandscapes.Array.data[0]
@@ -4556,11 +4556,11 @@ PrefabInstance:
       objectReference: {fileID: 8837462066831144926, guid: 6143e2b751b1608488e8fb6de7621a12, type: 3}
     - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: EnvironmentTypes.Fields.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: EnvironmentTypes.Village.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: EnvironmentTypes.Fields.Array.data[0]
@@ -4588,7 +4588,7 @@ PrefabInstance:
       objectReference: {fileID: 1801141880328092959, guid: 853e3c5538ea3124da9b407d2ee027a1, type: 3}
     - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: EnvironmentTypes.WinterFields.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6798152392047008686, guid: c34f981668b2341dca9cb45f1daefda2, type: 3}
       propertyPath: EnvironmentTypes.WinterFields.Array.data[0]
