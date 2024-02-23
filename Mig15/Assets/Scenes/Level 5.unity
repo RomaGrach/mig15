@@ -585,6 +585,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 95
       objectReference: {fileID: 0}
+    - target: {fileID: 8094335607071999765, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
+      propertyPath: far clip plane
+      value: 1600
+      objectReference: {fileID: 0}
     - target: {fileID: 8818680601931665431, guid: e776ea755f4ab480dab31537b7f19593, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
