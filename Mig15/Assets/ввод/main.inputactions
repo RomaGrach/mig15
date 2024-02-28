@@ -1,0 +1,96 @@
+{
+    "name": "main",
+    "maps": [
+        {
+            "name": "gamePlain",
+            "id": "72c086db-750b-4152-bca7-c8137a3718dd",
+            "actions": [
+                {
+                    "name": "mouve",
+                    "type": "Value",
+                    "id": "8f0a3c82-c246-46f4-85d8-54ffb419f3ea",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "SmallShout",
+                    "type": "Button",
+                    "id": "7c4c48ac-f8df-4bc7-a53c-5382b676a740",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BigShout",
+                    "type": "Button",
+                    "id": "0455d861-1b93-492d-a076-ecf2c8e951a5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "05772a24-9c3b-4613-9fe0-bd074f0bda60",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "mouve",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "04a10279-797b-4b4d-9b53-bd722b6992cc",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "mouve",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "62fe5f93-50a6-4751-98d4-a5b85d57b8cc",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "mouve",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "dea53273-6846-4092-ba77-6060934b5c1c",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SmallShout",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b7f6e606-380b-41c9-b4ba-1f296cd68934",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BigShout",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

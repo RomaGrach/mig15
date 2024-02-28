@@ -10,10 +10,24 @@ public class PlayerMouve : MonoBehaviour
     private bool isMovingRight = false;
     private int first = 0;
     [SerializeField] Animator anim;
-    public bool mobile = true;
+    public bool mobile = false;
     public FloatingJoystick FJ;
+    public GameObject DJ;
     //public GameObject playerplain; // Ссылка на объект, который выполняет анимацию
     //private Animator anim;
+
+    private void Start()
+    {
+        if (SystemInfo.deviceType == DeviceType.Handheld || mobile)
+        {
+            mobile = true;
+            FJ.resetJostic();
+        }
+        else
+        {
+            DJ.SetActive(false);
+        }
+    }
 
 
     void Update()
@@ -21,7 +35,7 @@ public class PlayerMouve : MonoBehaviour
 
         //FJ.resetJostic(); для сброса джостика
         
-
+        
 
         bool left = false;
         bool right = false;
