@@ -1,2 +1,2 @@
-Build path: /Users/romagrachev/mig15Work/готовые билды/build60
-Build number: 147
+Build path: /Users/romagrachev/mig15Work/готовые билды/build61GoodPlayen
+Build number: 148
