@@ -83,6 +83,7 @@ MonoBehaviour:
   anim: {fileID: 3393474337403056371}
   mobile: 1
   FJ: {fileID: 8766878777338223233}
+  DJ: {fileID: 0}
 --- !u!136 &624056467458048082
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -305,9 +306,9 @@ RectTransform:
   - {fileID: 7623386870016479372}
   m_Father: {fileID: 7823978291947104608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 719, y: -445}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 719, y: 95}
   m_SizeDelta: {x: 2048, y: 2048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2151523597189019756
@@ -443,9 +444,9 @@ RectTransform:
   - {fileID: 451625593984779893}
   m_Father: {fileID: 7823978291947104608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 490, y: -445}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 490, y: 95}
   m_SizeDelta: {x: 2048, y: 2048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7340872848701780466
@@ -1527,9 +1528,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9296a9b2f5adf934e8186a357802cfe6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 43fb3db265ff2e241a5a4a85b8a22b3b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.119
+  m_Volume: 0.36
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
         
         if (!Progress.Instance.PlayerDidSomething)
         {
-            Progress.Instance.DownloadProgress();
+            //Progress.Instance.DownloadProgress();
             Progress.Instance.PlayerDidSomething = true;
         }
         

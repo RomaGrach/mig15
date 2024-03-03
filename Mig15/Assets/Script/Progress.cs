@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Accessibility;
+using YG;
 using static UnityEngine.Rendering.DebugUI;
 
 [System.Serializable]
@@ -37,9 +38,14 @@ public class Progress : MonoBehaviour
     public static Progress Instance;
     public PlayerInfo PlayerInfo;
     public bool Yandex = false;
+    public bool YandexSDK = false;
     public bool Test = false;
     public bool PlayerDidSomething = false;
     public bool PlayerFirstGame = true;
+
+    private void OnEnable() => YandexGame.GetDataEvent += SetPlayerInfoYandexSDK;
+
+    private void OnDisable() => YandexGame.GetDataEvent -= SetPlayerInfoYandexSDK;
 
     private void Awake()
     {
@@ -64,14 +70,14 @@ public class Progress : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        //Instance.PlayerInfo = YandexGame.savesData.PlayerInfo;
     }
     private IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(2f);
         Test = true;
         Debug.Log("WaitTime" + PlayerInfo.Coins);
-        DownloadProgress();
+        //DownloadProgress();
         Debug.Log("WaitTime" + PlayerInfo.Coins);
 
     }
@@ -80,7 +86,8 @@ public class Progress : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //YandexGame.ResetSaveProgress();
+
     }
 
     // Update is called once per frame
@@ -90,6 +97,8 @@ public class Progress : MonoBehaviour
     }
     public void SaveProgres()
     {
+        SaveProgresYandexSDK();
+        /*
         Debug.Log("SaveProgres" + Yandex);
         if (Yandex)
         {
@@ -100,11 +109,14 @@ public class Progress : MonoBehaviour
             SaveProgresPlayerPrefs();
         }
         Debug.Log(PlayerInfo);
+        */
     }
 
 
     public void DownloadProgress()
     {
+        SetPlayerInfoYandexSDK();
+        /*
         Debug.Log("DownloadProgress" + Yandex);
         if (Yandex)
         {
@@ -115,6 +127,7 @@ public class Progress : MonoBehaviour
             DownloadProgressPlayerPrefs();
         }
         Debug.Log(PlayerInfo);
+        */
     }
 
     public void DownloadProgressPlayerPrefs()
@@ -142,6 +155,62 @@ public class Progress : MonoBehaviour
     {
         string jsonString = JsonUtility.ToJson(PlayerInfo);
         SaveExtern(jsonString);
+    }
+
+    public void SaveProgresYandexSDK()
+    {
+        YandexGame.savesData.PlayerInfo = Instance.PlayerInfo;
+        /*
+        YandexGame.savesData.Coins= Instance.PlayerInfo.Coins;
+        YandexGame.savesData.Killed =Instance.PlayerInfo.Killed;
+        YandexGame.savesData.Flight =Instance.PlayerInfo.Flight;
+        YandexGame.savesData.MaxHP =Instance.PlayerInfo.MaxHP;
+        YandexGame.savesData.Damage =Instance.PlayerInfo.Damage;
+        YandexGame.savesData.Armor =Instance.PlayerInfo.Armor;
+        YandexGame.savesData.TimeBetwinShots =Instance.PlayerInfo.TimeBetwinShots;
+        YandexGame.savesData.TimeBetwinShots37 =Instance.PlayerInfo.TimeBetwinShots37;
+        YandexGame.savesData.Level =Instance.PlayerInfo.Level;
+        YandexGame.savesData.Hprice =Instance.PlayerInfo.Hprice;
+        YandexGame.savesData.Dprice =Instance.PlayerInfo.Dprice;
+        YandexGame.savesData.Aprice =Instance.PlayerInfo.Aprice;
+        YandexGame.savesData.Sprice =Instance.PlayerInfo.Sprice;
+        YandexGame.savesData.S23price =Instance.PlayerInfo.S23price;
+        YandexGame.savesData.S37price = Instance.PlayerInfo.S37price;
+        Debug.Log("2222222222222");
+        Debug.Log(Instance.PlayerInfo.Coins.ToString());
+        Debug.Log(YandexGame.savesData.Coins.ToString());
+        Debug.Log("2222222222222");
+        */
+        YandexGame.SaveProgress();
+
+
+    }
+
+    public void SetPlayerInfoYandexSDK()
+    {
+        Instance.PlayerInfo = YandexGame.savesData.PlayerInfo;
+        /*
+        YandexGame.ResetSaveProgress();
+        Instance.PlayerInfo.Coins = YandexGame.savesData.Coins;
+        Instance.PlayerInfo.Killed =YandexGame.savesData.Killed;
+        Instance.PlayerInfo.Flight =YandexGame.savesData.Flight;
+        Instance.PlayerInfo.MaxHP =YandexGame.savesData.MaxHP;
+        Instance.PlayerInfo.Damage =YandexGame.savesData.Damage;
+        Instance.PlayerInfo.Armor =YandexGame.savesData.Armor;
+        Instance.PlayerInfo.TimeBetwinShots =YandexGame.savesData.TimeBetwinShots;
+        Instance.PlayerInfo.TimeBetwinShots37 =YandexGame.savesData.TimeBetwinShots37;
+        Instance.PlayerInfo.Level =YandexGame.savesData.Level;
+        Instance.PlayerInfo.Hprice =YandexGame.savesData.Hprice;
+        Instance.PlayerInfo.Dprice =YandexGame.savesData.Dprice;
+        Instance.PlayerInfo.Aprice =YandexGame.savesData.Aprice;
+        Instance.PlayerInfo.Sprice =YandexGame.savesData.Sprice;
+        Instance.PlayerInfo.S23price =YandexGame.savesData.S23price;
+        Instance.PlayerInfo.S37price =YandexGame.savesData.S37price;
+        Debug.Log("11111111111111111111");
+        Debug.Log(Instance.PlayerInfo.Coins.ToString());
+        Debug.Log(YandexGame.savesData.Coins.ToString());
+        Debug.Log("11111111111111111111");
+        */
     }
 
     public void SetPlayerInfoYandex(string value)

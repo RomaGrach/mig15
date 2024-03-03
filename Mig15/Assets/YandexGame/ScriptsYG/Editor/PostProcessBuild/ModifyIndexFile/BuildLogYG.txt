@@ -1,2 +1,2 @@
-Build path: /Users/romagrachev/mig15Work/готовые билды/build61GoodPlayen
-Build number: 148
+Build path: /Users/romagrachev/mig15Work/готовые билды/build64NotStupidSaves
+Build number: 151

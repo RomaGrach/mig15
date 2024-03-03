@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
     public Comments[] tips;
-    public Text comments_txt;
+    [SerializeField] TextMeshProUGUI comments_txt;
+    
     //public Text comments2;
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;

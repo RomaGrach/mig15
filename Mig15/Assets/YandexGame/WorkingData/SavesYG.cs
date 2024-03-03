@@ -17,7 +17,24 @@ namespace YG
         public bool[] openLevels = new bool[3];
 
         // Ваши сохранения
-
+        public PlayerInfo PlayerInfo;
+        /*
+        public int Coins = 5;
+        public int Killed = 0;
+        public int Flight = 0;
+        public float MaxHP = 5;
+        public float Damage = 2;
+        public float Armor = 1;
+        public float TimeBetwinShots = 0.5f;
+        public float TimeBetwinShots37 = 2f;
+        public int Level = 0;
+        public float Hprice = 5;
+        public float Dprice = 5;
+        public float Aprice = 5;
+        public float Sprice = 5;
+        public float S23price = 5;
+        public float S37price = 5;
+        */
         // ...
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
@@ -27,7 +44,9 @@ namespace YG
         public SavesYG()
         {
             // Допустим, задать значения по умолчанию для отдельных элементов массива
-
+            //Progress.Instance.PlayerInfo = YandexGame.savesData.PlayerInfo;
+            //YandexGame.savesData.PlayerInfo = Progress.Instance.PlayerInfo;
+            //PlayerInfo = Progress.Instance.PlayerInfo;
             openLevels[1] = true;
         }
     }

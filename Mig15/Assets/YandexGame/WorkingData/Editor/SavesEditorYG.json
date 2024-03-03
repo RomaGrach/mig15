@@ -1,0 +1,30 @@
+{
+    "idSave": 31,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "PlayerInfo": {
+        "Coins": 0,
+        "Killed": 0,
+        "Flight": 0,
+        "MaxHP": 5.0,
+        "Damage": 2.0,
+        "Armor": 2.5,
+        "TimeBetwinShots": 0.5,
+        "TimeBetwinShots37": 2.0,
+        "Level": 0,
+        "Hprice": 5.0,
+        "Dprice": 5.0,
+        "Aprice": 6.5,
+        "Sprice": 5.0,
+        "S23price": 5.0,
+        "S37price": 5.0
+    }
+}
