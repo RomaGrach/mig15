@@ -28,7 +28,7 @@ public class ScoreManager : MonoBehaviour
         {
             if (CanvasFinish.activeSelf == true) // проверка на то что объект активен
             {
-                endMoney = (int)(killedEnemies * 1.2); // endMoney должнобыть целое число
+                endMoney += (int)(killedEnemies * 1.2); // endMoney должнобыть целое число
                 MoneyTextEnd.text = "Жетоны: +" + endMoney.ToString();
                 Progress.Instance.PlayerInfo.Coins += endMoney;
                 Progress.Instance.PlayerInfo.Killed += killedEnemies;
