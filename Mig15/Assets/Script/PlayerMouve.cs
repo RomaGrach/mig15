@@ -18,6 +18,7 @@ public class PlayerMouve : MonoBehaviour
 
     private void Start()
     {
+        /*
         if (SystemInfo.deviceType == DeviceType.Handheld || mobile)
         {
             mobile = true;
@@ -27,6 +28,7 @@ public class PlayerMouve : MonoBehaviour
         {
             DJ.SetActive(false);
         }
+        */
     }
 
 

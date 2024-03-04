@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Accessibility;
 using YG;
+using static UnityEngine.AudioSettings;
 using static UnityEngine.Rendering.DebugUI;
 
 [System.Serializable]
@@ -24,6 +25,7 @@ public class PlayerInfo
     public float Sprice = 5;
     public float S23price = 5;
     public float S37price = 5;
+    public bool Desktop = true;
 }
 
 public class Progress : MonoBehaviour
@@ -87,7 +89,7 @@ public class Progress : MonoBehaviour
     void Start()
     {
         //YandexGame.ResetSaveProgress();
-
+        Instance.PlayerInfo.Desktop = YandexGame.EnvironmentData.isDesktop;
     }
 
     // Update is called once per frame
