@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     }
     public void ShowFinishWindowBadEnd()
     {
+        Cursor.lockState = CursorLockMode.None;
         _finishWindow.SetActive(true);
         _finishWindowBad.SetActive(true);
         win = false;
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
     }
     public void ShowFinishWindowGoodEnd()
     {
+        Cursor.lockState = CursorLockMode.None;
         _finishWindow.SetActive(true);
         _finishWindowGood.SetActive(true);
         win = true;
@@ -62,6 +64,7 @@ public class GameManager : MonoBehaviour
     }
     public void NextLevel()
     {
+        Cursor.lockState = CursorLockMode.None;
         if (win)
         {
             int next = SceneManager.GetActiveScene().buildIndex + 1;
