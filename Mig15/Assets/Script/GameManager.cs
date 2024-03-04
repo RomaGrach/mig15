@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Progress.Instance.PlayerFirstGame)
+        //Cursor.lockState = CursorLockMode.Locked;
+        if (Progress.Instance.PlayerFirstGame)
         {
             Progress.Instance.PlayerFirstGame = false;
             Progress.Instance.PlayAdv();
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     }
     public void Play()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         GlobalEventManager.SendLevelStarted();
         //FindObjectOfType<GeneratorEnemiModified>().Play();
         _startMenu.SetActive(false);
