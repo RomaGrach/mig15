@@ -1,5 +1,5 @@
 {
-    "idSave": 58,
+    "idSave": 62,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -11,9 +11,9 @@
         false
     ],
     "PlayerInfo": {
-        "Coins": 66,
-        "Killed": 27,
-        "Flight": 20,
+        "Coins": 68,
+        "Killed": 28,
+        "Flight": 22,
         "MaxHP": 5.0,
         "Damage": 2.0,
         "Armor": 2.5,
