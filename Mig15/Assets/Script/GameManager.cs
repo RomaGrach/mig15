@@ -39,7 +39,10 @@ public class GameManager : MonoBehaviour
     }
     public void Play()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (Progress.Instance.PlayerInfo.Desktop)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         GlobalEventManager.SendLevelStarted();
         //FindObjectOfType<GeneratorEnemiModified>().Play();
         _startMenu.SetActive(false);

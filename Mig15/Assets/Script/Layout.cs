@@ -11,6 +11,14 @@ public class Layout : MonoBehaviour
     private void Start()
     {
         isOn = Progress.Instance.PlayerInfo.Desktop;
+        if (isOn)
+        {
+            TextButtonLayout.text = "Desktop";
+        }
+        else 
+        {
+            TextButtonLayout.text = "Mobile";
+        }
     }
 
 

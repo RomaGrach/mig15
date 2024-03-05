@@ -35,7 +35,10 @@ public class PauseMenu : MonoBehaviour
     }
     public void Button_back()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (Progress.Instance.PlayerInfo.Desktop)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         Time.timeScale = 1f;
         GameIsPaused = false;
         pauseMenuUI.SetActive(false);
