@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -37,5 +38,22 @@ public class ScoreManager : MonoBehaviour
                 flag = false;
             }
         }
+    }
+    public void ADMoneyX2()
+    {
+        YandexGame.RewVideoShow(10010);
+    }
+    void Reward(int id)
+    {
+        if (id == 10010)
+        {
+            Progress.Instance.PlayerInfo.Coins += endMoney;
+            Progress.Instance.SaveProgres();
+        }
+
+    }
+    private void Start()
+    {
+        YandexGame.RewardVideoEvent += Reward;
     }
 }

@@ -1,2 +1,2 @@
-Build path: /Users/romagrachev/mig15Work/готовые билды/build66MobeleReborn
-Build number: 153
+Build path: /Users/romagrachev/mig15Work/готовые билды/build68Slow
+Build number: 155
