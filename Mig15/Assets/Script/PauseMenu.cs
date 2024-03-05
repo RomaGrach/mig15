@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Progress.Instance.PlayerInfo.Desktop)
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
         Time.timeScale = 1f;
         GameIsPaused = false;
