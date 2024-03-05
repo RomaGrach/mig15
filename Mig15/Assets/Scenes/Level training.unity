@@ -931,7 +931,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ae95cc1d89b511643b7fc7fa41be43d8, type: 2}
   - {fileID: 11400000, guid: a10d83093a1ce6b4f8fdc19d37f166ab, type: 2}
   - {fileID: 11400000, guid: 51dc924a8fa19e74a9262a2457c49908, type: 2}
-  comments_txt: {fileID: 1380273370}
+  Comment: {fileID: 0}
+  GameIsPaused: 0
   pauseMenuUI: {fileID: 760037773}
 --- !u!1 &434114349
 GameObject:
@@ -3483,6 +3484,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5602536930683482284, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
       propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688485366433959075, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5723621534109974869, guid: 6b7085027860b4e3e83bb9b2fa6f41e7, type: 3}
