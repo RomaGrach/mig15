@@ -90,7 +90,35 @@ public class Progress : MonoBehaviour
     {
         //YandexGame.ResetSaveProgress();
         Instance.PlayerInfo.Desktop = YandexGame.EnvironmentData.isDesktop;
+        YandexGame.OpenFullAdEvent += StopGame;
+        YandexGame.CloseFullAdEvent += PlayGame;
+        YandexGame.OpenVideoEvent += StopGame;
+        YandexGame.CloseVideoEvent += PlayGame;
+        YandexGame.RewardVideoEvent += Reward;
+        YandexGame.FullscreenShow();
     }
+
+    void StopGame()
+    {
+        Time.timeScale = 0f;
+        AudioListener.volume = 0f;
+    }
+
+    void PlayGame()
+    {
+        Time.timeScale = 1f;
+        AudioListener.volume = 1f;
+    }
+
+    void Reward(int id)
+    {
+        if (id == 1)
+        {
+            
+        }
+
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -222,12 +250,15 @@ public class Progress : MonoBehaviour
 
     public void PlayAdv()
     {
+        YandexGame.FullscreenShow();
+        /*
         if (Yandex)
         {
             Time.timeScale = 0f;
             AudioListener.volume = 0f;
             ShowAdv();
         }
+        */
     }
 
     public void StopAdv()
