@@ -10,7 +10,15 @@ public class Layout : MonoBehaviour
 
     private void Start()
     {
-        isOn = true;
+        isOn = Progress.Instance.PlayerInfo.Desktop;
+        if (isOn)
+        {
+            TextButtonLayout.text = "Desktop";
+        }
+        else 
+        {
+            TextButtonLayout.text = "Mobile";
+        }
     }
 
 
@@ -19,13 +27,13 @@ public class Layout : MonoBehaviour
         if (!isOn)
         {
             TextButtonLayout.text = "Desktop";
-
+            Progress.Instance.PlayerInfo.Desktop = true;
             isOn = true;
         }
         else if (isOn)
         {
             TextButtonLayout.text = "Mobile";
-
+            Progress.Instance.PlayerInfo.Desktop = false;
             isOn = false;
         }
 

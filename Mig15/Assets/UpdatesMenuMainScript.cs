@@ -128,7 +128,11 @@ public class UpdatesMenuMainScript : MonoBehaviour
             prise = (Progress.Instance.PlayerInfo.S37price).ToString();
             value = (Progress.Instance.PlayerInfo.TimeBetwinShots37).ToString();
         }
-        TextDescription.text = descriptionname[a]+ "\n" + "Стоимость улучшения: " + prise + "\n"+"Текущие значение: "+ value + "\n" + description[a];
+        if (TextDescription)
+        {
+            TextDescription.text = descriptionname[a] + "\n" + "Стоимость улучшения: " + prise + "\n" + "Текущие значение: " + value + "\n" + description[a];
+        }
+        
     }
 
     public void Reset()

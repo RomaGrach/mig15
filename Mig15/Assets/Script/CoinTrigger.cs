@@ -16,10 +16,12 @@ public class CoinTrigger : MonoBehaviour
     private float multRot = 1f;
     private bool flag = false;
     public float x;
+    private GameObject score;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         pos.z = distanceZ;
         transform.position = pos;
         end = pos;
@@ -70,6 +72,7 @@ public class CoinTrigger : MonoBehaviour
         
         if (other.gameObject.tag == "bulletPlayer")
         {
+            FindObjectOfType<ScoreManager>().endMoney += 1;
             Destroy(gameObject);
             Debug.Log(gameObject.tag);
         }

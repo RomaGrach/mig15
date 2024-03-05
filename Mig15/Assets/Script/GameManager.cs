@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Progress.Instance.PlayerFirstGame)
+        //Cursor.lockState = CursorLockMode.Locked;
+        if (Progress.Instance.PlayerFirstGame)
         {
             Progress.Instance.PlayerFirstGame = false;
             Progress.Instance.PlayAdv();
@@ -38,6 +39,10 @@ public class GameManager : MonoBehaviour
     }
     public void Play()
     {
+        if (Progress.Instance.PlayerInfo.Desktop)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         GlobalEventManager.SendLevelStarted();
         //FindObjectOfType<GeneratorEnemiModified>().Play();
         _startMenu.SetActive(false);
@@ -46,6 +51,7 @@ public class GameManager : MonoBehaviour
     }
     public void ShowFinishWindowBadEnd()
     {
+        Cursor.lockState = CursorLockMode.None;
         _finishWindow.SetActive(true);
         _finishWindowBad.SetActive(true);
         win = false;
@@ -53,6 +59,7 @@ public class GameManager : MonoBehaviour
     }
     public void ShowFinishWindowGoodEnd()
     {
+        Cursor.lockState = CursorLockMode.None;
         _finishWindow.SetActive(true);
         _finishWindowGood.SetActive(true);
         win = true;
@@ -60,6 +67,7 @@ public class GameManager : MonoBehaviour
     }
     public void NextLevel()
     {
+        Cursor.lockState = CursorLockMode.None;
         if (win)
         {
             int next = SceneManager.GetActiveScene().buildIndex + 1;

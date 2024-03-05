@@ -9,6 +9,7 @@ public class PlayerInputSystem : MonoBehaviour
     private PlayerInput playerInput;
     private Main playerInputActions;
     public float movementSpeed = 1f;
+    [SerializeField] Animator anim;
     //private PlayerInputActions playerInputActions;
     // Start is called before the first frame update
     private void Awake()
