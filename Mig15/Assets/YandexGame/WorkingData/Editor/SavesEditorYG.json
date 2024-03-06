@@ -1,5 +1,5 @@
 {
-    "idSave": 68,
+    "idSave": 80,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -11,21 +11,21 @@
         false
     ],
     "PlayerInfo": {
-        "Coins": 216,
-        "Killed": 102,
-        "Flight": 28,
+        "Coins": 5,
+        "Killed": 0,
+        "Flight": 0,
         "MaxHP": 5.0,
         "Damage": 2.0,
-        "Armor": 2.5,
+        "Armor": 1.0,
         "TimeBetwinShots": 0.5,
         "TimeBetwinShots37": 2.0,
         "Level": 0,
-        "Hprice": 5.0,
-        "Dprice": 5.0,
-        "Aprice": 6.5,
-        "Sprice": 5.0,
-        "S23price": 5.0,
-        "S37price": 5.0,
+        "Hprice": 12.0,
+        "Dprice": 12.0,
+        "Aprice": 12.0,
+        "Sprice": 12.0,
+        "S23price": 12.0,
+        "S37price": 12.0,
         "Desktop": true
     }
 }
