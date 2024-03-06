@@ -44,6 +44,7 @@ public class playerGetDamage : MonoBehaviour
             }
             else if(TimeBeforDeath == 0)
             {
+                BeforeDethEnd();
                 Debug.Log($"�� ����� �� ����");
                 FindObjectOfType<GameManager>().ShowFinishWindowBadEnd();
                 Destroy(gameObject);

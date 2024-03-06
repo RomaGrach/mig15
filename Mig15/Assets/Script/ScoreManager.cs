@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using YG;
 
@@ -29,6 +30,11 @@ public class ScoreManager : MonoBehaviour
         {
             if (CanvasFinish.activeSelf == true) // проверка на то что объект активен
             {
+                if (killedEnemies > Progress.Instance.PlayerInfo.MaxScore)
+                {
+                    Progress.Instance.PlayerInfo.MaxScore = killedEnemies;
+                    YandexGame.NewLeaderboardScores("Score", Progress.Instance.PlayerInfo.MaxScore);
+                }
                 endMoney += (int)(killedEnemies * 1.2); // endMoney должнобыть целое число
                 MoneyTextEnd.text = "Жетоны: +" + endMoney.ToString();
                 Progress.Instance.PlayerInfo.Coins += endMoney;

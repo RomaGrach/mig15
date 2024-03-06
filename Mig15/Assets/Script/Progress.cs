@@ -26,6 +26,7 @@ public class PlayerInfo
     public float S23price = 12;
     public float S37price = 12;
     public bool Desktop = true;
+    public int MaxScore = 0;
 }
 
 public class Progress : MonoBehaviour
