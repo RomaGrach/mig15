@@ -19,12 +19,12 @@ public class PlayerInfo
     public float TimeBetwinShots = 0.5f;
     public float TimeBetwinShots37 = 2f;
     public int Level = 0;
-    public float Hprice = 5;
-    public float Dprice = 5;
-    public float Aprice = 5;
-    public float Sprice = 5;
-    public float S23price = 5;
-    public float S37price = 5;
+    public float Hprice = 12;
+    public float Dprice = 12;
+    public float Aprice = 12;
+    public float Sprice = 12;
+    public float S23price = 12;
+    public float S37price = 12;
     public bool Desktop = true;
 }
 
