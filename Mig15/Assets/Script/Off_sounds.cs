@@ -18,7 +18,7 @@ public class Off_sounds : MonoBehaviour
     {
         if (isOn == false)
         {
-            TextButtonSound.text = "Βϋκλώχεν";
+            TextButtonSound.text = "Π’Ρ‹ΠΊΠ»ΡΡ‡ΠµΠ½";
         }
     }
  
@@ -26,13 +26,13 @@ public class Off_sounds : MonoBehaviour
     {
         if(!isOn)
         {
-            TextButtonSound.text = "Βκλώχεν";
+            TextButtonSound.text = "Π’ΠΊΠ»ΡΡ‡ΠµΠ½";
             AudioListener.volume = 1f;
             isOn = true;
         }
         else if (isOn)
         {
-            TextButtonSound.text = "Βϋκλώχεν";
+            TextButtonSound.text = "Π’Ρ‹ΠΊΠ»ΡΡ‡ΠµΠ½";
             AudioListener.volume = 0f;
             isOn = false;
         }

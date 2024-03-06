@@ -1,2 +1,2 @@
-Build path: /Users/romagrachev/mig15Work/готовые билды/build74LiderBoard
-Build number: 160
+Build path: /Users/romagrachev/mig15Work/готовые билды/build75SettingsUpdate
+Build number: 161
