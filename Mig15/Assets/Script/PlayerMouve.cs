@@ -121,8 +121,17 @@ public class PlayerMouve : MonoBehaviour
     {
         // Движение объекта вправо-влево
         // Мы перемещаем объект по оси X, оставляя Y и Z без изменений
-        Vector3 movement = new Vector3(direction, 0f, 0f) * movementSpeed * Time.deltaTime;
-        transform.Translate(movement);
+        if(FJ.Horizontal != 0)
+        {
+            Vector3 movement = new Vector3(FJ.Horizontal, 0f, 0f) * movementSpeed * Time.deltaTime;
+            transform.Translate(movement);
+        }
+        else
+        {
+            Vector3 movement = new Vector3(direction, 0f, 0f) * movementSpeed * Time.deltaTime;
+            transform.Translate(movement);
+        }
+        
     }
     /*
     [SerializeField] Animator _animator;
