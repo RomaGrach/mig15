@@ -21,6 +21,9 @@ public class gunPlayer : MonoBehaviour
     [SerializeField] GameObject _ImageBigGun;
     Image ImageSmallGun;
     Image ImageBigGun;
+    public bool Pres37Gun = false;
+    public bool Pres23Gun = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +60,15 @@ public class gunPlayer : MonoBehaviour
 
         }
     }
+    public void Button37(bool i)
+    {
+        Pres37Gun = i;
+    }
+    public void Button23(bool i)
+    {
+        Pres23Gun = i;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -70,33 +82,17 @@ public class gunPlayer : MonoBehaviour
         }
         ImageSmallGun.fillAmount = (startTimeBtwShots - timeBtwShots) / startTimeBtwShots;
         ImageBigGun.fillAmount = (startTimeBtwShots37 - timeBtwShots37) / startTimeBtwShots37;
-        if (Input.GetKey(KeyCode.W))
+        
+        if (Pres23Gun || Input.GetKey(KeyCode.W))
         {
-            if (timeBtwShots <= 0)
-            {
-                
-                float oldDamage = bullet.GetComponent<puly>().damage;
-                bullet.GetComponent<puly>().damage = (LinDamage + oldDamage) * MultDamage;
-                Instantiate(bullet, shotPointL.position, shotPointL.rotation);
-                Instantiate(bullet, shotPointR.position, shotPointR.rotation);
-                bullet.GetComponent<puly>().damage = oldDamage;
-                timeBtwShots = startTimeBtwShots;
-                
-            }
-            if (timeBtwShots37 <= 0)
-            {
-                
-                float oldDamage = bullet37.GetComponent<puly>().damage;
-                bullet37.GetComponent<puly>().damage = (LinDamage37 + oldDamage) * MultDamage;
-                Instantiate(bullet37, shotPoint37mm.position, shotPoint37mm.rotation);
-                bullet37.GetComponent<puly>().damage = oldDamage;
-                timeBtwShots37 = startTimeBtwShots37;
-                
-            }
-
-
+            fire23();
         }
-        if(timeBtwShots > 0)
+        if (Pres37Gun || Input.GetKey(KeyCode.W))
+        {
+            fire37();
+        }
+
+        if (timeBtwShots > 0)
         {
             timeBtwShots -= Time.deltaTime;
         }
@@ -104,6 +100,7 @@ public class gunPlayer : MonoBehaviour
         {
             timeBtwShots37 -= Time.deltaTime;
         }
+
         /*
             ImageSmallGun.fillAmount = (startTimeBtwShots - timeBtwShots) / startTimeBtwShots;
         if (timeBtwShots <= 0)
