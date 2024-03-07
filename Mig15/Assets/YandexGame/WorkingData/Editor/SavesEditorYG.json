@@ -1,5 +1,5 @@
 {
-    "idSave": 78,
+    "idSave": 80,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -11,9 +11,9 @@
         false
     ],
     "PlayerInfo": {
-        "Coins": 5,
-        "Killed": 0,
-        "Flight": 0,
+        "Coins": 44,
+        "Killed": 15,
+        "Flight": 2,
         "MaxHP": 5.0,
         "Damage": 2.0,
         "Armor": 1.0,
@@ -27,6 +27,6 @@
         "S23price": 12.0,
         "S37price": 12.0,
         "Desktop": true,
-        "MaxScore": 0
+        "MaxScore": 13
     }
 }
