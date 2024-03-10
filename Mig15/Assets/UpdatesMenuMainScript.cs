@@ -7,7 +7,7 @@ public class UpdatesMenuMainScript : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI TextDescription;
     [SerializeField] TextMeshProUGUI TextMoney;
-    float priseIndex = 1.5f;
+    float priseIndex = 2.0f;
     float UpdateIndex = 1.5f;
     int NowUpdate = -1;
     string[] descriptionname = new string[]
@@ -57,7 +57,7 @@ public class UpdatesMenuMainScript : MonoBehaviour
             if(Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.Hprice)
             {
                 Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.Hprice);
-                Progress.Instance.PlayerInfo.Hprice += priseIndex;
+                Progress.Instance.PlayerInfo.Hprice *= priseIndex;
                 Progress.Instance.PlayerInfo.MaxHP += UpdateIndex;
                 
             }
@@ -68,7 +68,7 @@ public class UpdatesMenuMainScript : MonoBehaviour
             if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.Dprice)
             {
                 Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.Dprice);
-                Progress.Instance.PlayerInfo.Dprice += priseIndex;
+                Progress.Instance.PlayerInfo.Dprice *= priseIndex;
                 Progress.Instance.PlayerInfo.Damage += UpdateIndex;
             }
         }
@@ -77,7 +77,7 @@ public class UpdatesMenuMainScript : MonoBehaviour
             if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.Aprice)
             {
                 Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.Aprice);
-                Progress.Instance.PlayerInfo.Aprice += priseIndex;
+                Progress.Instance.PlayerInfo.Aprice *= priseIndex;
                 Progress.Instance.PlayerInfo.Armor += UpdateIndex;
             }
         }
@@ -86,7 +86,7 @@ public class UpdatesMenuMainScript : MonoBehaviour
             if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.S23price)
             {
                 Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S23price);
-                Progress.Instance.PlayerInfo.S23price += priseIndex;
+                Progress.Instance.PlayerInfo.S23price *= priseIndex;
                 Progress.Instance.PlayerInfo.TimeBetwinShots -= 0.1f;
             }
         }
@@ -95,7 +95,7 @@ public class UpdatesMenuMainScript : MonoBehaviour
             if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.S37price)
             {
                 Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S37price);
-                Progress.Instance.PlayerInfo.S37price += priseIndex;
+                Progress.Instance.PlayerInfo.S37price *= priseIndex;
                 Progress.Instance.PlayerInfo.TimeBetwinShots37 -= 0.1f;
             }
         }

@@ -13,11 +13,11 @@ public class Layout : MonoBehaviour
         isOn = Progress.Instance.PlayerInfo.Desktop;
         if (isOn)
         {
-            TextButtonLayout.text = "Desktop";
+            TextButtonLayout.text = "компьютер";
         }
         else 
         {
-            TextButtonLayout.text = "Mobile";
+            TextButtonLayout.text = "смартфон";
         }
     }
 
@@ -26,13 +26,13 @@ public class Layout : MonoBehaviour
     {
         if (!isOn)
         {
-            TextButtonLayout.text = "Desktop";
+            TextButtonLayout.text = "компьютер";
             Progress.Instance.PlayerInfo.Desktop = true;
             isOn = true;
         }
         else if (isOn)
         {
-            TextButtonLayout.text = "Mobile";
+            TextButtonLayout.text = "смартфон";
             Progress.Instance.PlayerInfo.Desktop = false;
             isOn = false;
         }
