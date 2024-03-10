@@ -85,18 +85,26 @@ public class UpdatesMenuMainScript : MonoBehaviour
         {
             if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.S23price)
             {
-                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S23price);
-                Progress.Instance.PlayerInfo.S23price *= priseIndex;
-                Progress.Instance.PlayerInfo.TimeBetwinShots -= 0.1f;
+                float newShotSpeed = Progress.Instance.PlayerInfo.TimeBetwinShots - 0.03f;
+                if (newShotSpeed > 0) { 
+                    Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S23price);
+                    Progress.Instance.PlayerInfo.S23price *= priseIndex;
+                    Progress.Instance.PlayerInfo.TimeBetwinShots = newShotSpeed;
+                }
             }
         }
         else if (NowUpdate == 4)
         {
+            
             if (Progress.Instance.PlayerInfo.Coins >= Progress.Instance.PlayerInfo.S37price)
             {
-                Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S37price);
-                Progress.Instance.PlayerInfo.S37price *= priseIndex;
-                Progress.Instance.PlayerInfo.TimeBetwinShots37 -= 0.1f;
+                float newShotSpeed = Progress.Instance.PlayerInfo.TimeBetwinShots37 - 0.03f;
+                if (newShotSpeed > 0)
+                {
+                    Progress.Instance.PlayerInfo.Coins -= (int)(Progress.Instance.PlayerInfo.S37price);
+                    Progress.Instance.PlayerInfo.S37price *= priseIndex;
+                    Progress.Instance.PlayerInfo.TimeBetwinShots37 = newShotSpeed;
+                }
             }
         }
     }
