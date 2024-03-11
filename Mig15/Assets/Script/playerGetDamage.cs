@@ -22,7 +22,13 @@ public class playerGetDamage : MonoBehaviour
     void Start()
     {
         Maxhp = Progress.Instance.PlayerInfo.MaxHP;
+        if (Maxhp <= 0)
+        {
+            Maxhp = 5;
+            Debug.Log("_______________Ошибка сдоровья_______________");
+        }
         hp = Maxhp;
+        
         healthBar = Image.GetComponent<Image>();
         ImageBeforDeath = ImageBeforDeathfill.GetComponent<Image>();
         TimeBeforDeath = TimeBeforDeathStatic;
