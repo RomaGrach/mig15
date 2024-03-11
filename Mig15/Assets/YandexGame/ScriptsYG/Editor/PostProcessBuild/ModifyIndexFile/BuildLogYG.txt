@@ -1,2 +1,2 @@
-Build path: /Users/romagrachev/mig15Work/готовые билды/build75SettingsUpdate
-Build number: 161
+Build path: /Users/romagrachev/mig15Work/готовые билды/build86
+Build number: 171

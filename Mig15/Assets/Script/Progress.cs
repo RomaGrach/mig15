@@ -27,6 +27,7 @@ public class PlayerInfo
     public float S37price = 12;
     public bool Desktop = true;
     public int MaxScore = 0;
+    public bool FirstGame = true;
 }
 
 public class Progress : MonoBehaviour
@@ -41,10 +42,12 @@ public class Progress : MonoBehaviour
     public static Progress Instance;
     public PlayerInfo PlayerInfo;
     public bool Yandex = false;
+    public bool Desktop = false;
     public bool YandexSDK = false;
     public bool Test = false;
     public bool PlayerDidSomething = false;
     public bool PlayerFirstGame = true;
+    public bool DebugRejim = false;
 
     private void OnEnable() => YandexGame.GetDataEvent += SetPlayerInfoYandexSDK;
 
@@ -52,6 +55,7 @@ public class Progress : MonoBehaviour
 
     private void Awake()
     {
+        /*
         Yandex = false;
 #if UNITY_WEBGL
         Yandex = true;
@@ -61,6 +65,7 @@ public class Progress : MonoBehaviour
         Yandex = false;
         Debug.Log("Unity Editor");
 #endif
+        */
         
         if (Instance == null)
         {
@@ -89,14 +94,34 @@ public class Progress : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (Instance.PlayerInfo == null)
+        {
+            resetProgress();
+            Debug.Log("____________________Ошибка Instance.PlayerInfo___________________");
+
+        }
         //YandexGame.ResetSaveProgress();
-        Instance.PlayerInfo.Desktop = YandexGame.EnvironmentData.isDesktop;
-        YandexGame.OpenFullAdEvent += StopGame;
-        YandexGame.CloseFullAdEvent += PlayGame;
-        YandexGame.OpenVideoEvent += StopGame;
-        YandexGame.CloseVideoEvent += PlayGame;
-        YandexGame.RewardVideoEvent += Reward;
-        YandexGame.FullscreenShow();
+        if (Instance.PlayerInfo.FirstGame)
+        {
+            //Instance.PlayerInfo.FirstGame = false;
+            
+            resetProgress();
+            Instance.PlayerInfo.FirstGame = false;
+            SaveProgres();
+        }
+        if (Yandex)
+        {
+            Instance.PlayerInfo.Desktop = YandexGame.EnvironmentData.isDesktop;
+            YandexGame.OpenFullAdEvent += StopGame;
+            YandexGame.CloseFullAdEvent += PlayGame;
+            YandexGame.OpenVideoEvent += StopGame;
+            YandexGame.CloseVideoEvent += PlayGame;
+            //YandexGame.RewardVideoEvent += Reward;
+            YandexGame.FullscreenShow();
+        }
+        Instance.PlayerInfo.Desktop = Desktop;
+
+
     }
 
     void StopGame()
@@ -111,54 +136,78 @@ public class Progress : MonoBehaviour
         AudioListener.volume = 1f;
     }
 
-    void Reward(int id)
-    {
-        if (id == 1)
-        {
-            
-        }
-
-    }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (DebugRejim)
+        {
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                if (PlayerInfo == null)
+                {
+                    Debug.Log("____________________Ошибка PlayerInfo___________________");
+                }
+                if (Instance.PlayerInfo == null)
+                {
+                    resetProgress();
+                    Debug.Log("____________________Ошибка Instance.PlayerInfo___________________");
+
+                }
+                if (PlayerInfo == null)
+                {
+                    Debug.Log("____________________Ошибка PlayerInfo___________________");
+                }
+                if (Instance.PlayerInfo == null)
+                {
+                    Instance.PlayerInfo = new PlayerInfo();
+                    Instance.PlayerInfo.Desktop = Desktop;
+                    Debug.Log("____________________Ошибка Instance.PlayerInfo___________________");
+
+                }
+                foreach (var field in Instance.PlayerInfo.GetType().GetFields())
+                {
+                    var value = field.GetValue(PlayerInfo);
+                    Debug.Log(field.Name + ": " + value);
+                }
+                
+            }
+        }
     }
     public void SaveProgres()
     {
-        SaveProgresYandexSDK();
-        /*
+        
         Debug.Log("SaveProgres" + Yandex);
         if (Yandex)
         {
-            SaveProgresYandex();
+            //SaveProgresYandex();
+            SaveProgresYandexSDK();
         }
         else
         {
             SaveProgresPlayerPrefs();
         }
         Debug.Log(PlayerInfo);
-        */
+        
     }
 
 
     public void DownloadProgress()
     {
-        SetPlayerInfoYandexSDK();
-        /*
+        
         Debug.Log("DownloadProgress" + Yandex);
         if (Yandex)
         {
-            LoadExtern();
+            //LoadExtern();
+            SetPlayerInfoYandexSDK();
         }
         else
         {
             DownloadProgressPlayerPrefs();
         }
         Debug.Log(PlayerInfo);
-        */
+        
     }
 
     public void DownloadProgressPlayerPrefs()
@@ -179,6 +228,7 @@ public class Progress : MonoBehaviour
     public void resetProgress()
     {
         PlayerInfo = new PlayerInfo();
+        Instance.PlayerInfo.Desktop = Desktop;
         SaveProgres();
     }
 
@@ -251,7 +301,11 @@ public class Progress : MonoBehaviour
 
     public void PlayAdv()
     {
-        YandexGame.FullscreenShow();
+        if (Yandex)
+        {
+            YandexGame.FullscreenShow();
+        }
+        
         /*
         if (Yandex)
         {
