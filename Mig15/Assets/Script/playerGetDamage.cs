@@ -15,7 +15,9 @@ public class playerGetDamage : MonoBehaviour
     [SerializeField] Image ImageBeforDeathfill;
     Image ImageBeforDeath;
     public bool BeforeDeth = false;
+    public bool GodMode = false;
     public float TimeBeforDeath = 50;
+    float TimeGodMode = 3;
     public float TimeBeforDeathStatic = 50;
 
     // Start is called before the first frame update
@@ -34,7 +36,10 @@ public class playerGetDamage : MonoBehaviour
         TimeBeforDeath = TimeBeforDeathStatic;
         YandexGame.RewardVideoEvent += Reward;
     }
-
+    private void OnDestroy()
+    {
+        YandexGame.RewardVideoEvent -= Reward;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -48,7 +53,8 @@ public class playerGetDamage : MonoBehaviour
                 Debug.LogError("РАБОТАЕТ1");
                 BeforeDethStart();
             }
-            else if(TimeBeforDeath == 0)
+            
+            else if(TimeBeforDeath == 0 && !GodMode)
             {
                 BeforeDethEnd();
                 Debug.Log($"�� ����� �� ����");
@@ -63,10 +69,13 @@ public class playerGetDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "bulletEnemy")
         {
-           
-            hp -= other.gameObject.GetComponent<puly>().damage;
-            Instantiate(_bricksEffectPrefab, transform.position, transform.rotation);
-            Destroy(other.gameObject);
+            if (!GodMode)
+            {
+                hp -= other.gameObject.GetComponent<puly>().damage;
+                Instantiate(_bricksEffectPrefab, transform.position, transform.rotation);
+                Destroy(other.gameObject);
+            }
+            
         }
 
     }
@@ -83,6 +92,7 @@ public class playerGetDamage : MonoBehaviour
         {
             BeforeDethEnd();
         }
+        
     }
     public void BeforeDethStart()
     {
@@ -97,6 +107,7 @@ public class playerGetDamage : MonoBehaviour
         Time.timeScale = 1f;
         BeforeDeth = false;
         TimeBeforDeath = 0;
+        
     }
     public void ADReborn()
     {
@@ -107,8 +118,16 @@ public class playerGetDamage : MonoBehaviour
         if (id == 1100010)
         {
             hp = Maxhp;
+            GodMode = true;
+            StartCoroutine(GodMod());
             BeforeDethEnd();
         }
+
+    }
+    public IEnumerator GodMod()
+    {
+        yield return new WaitForSeconds(TimeGodMode);
+        GodMode = false;
 
     }
 }
