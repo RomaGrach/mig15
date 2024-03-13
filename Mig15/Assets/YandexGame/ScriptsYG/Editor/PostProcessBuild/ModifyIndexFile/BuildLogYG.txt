@@ -1,2 +1,2 @@
-Build path: /Users/romagrachev/mig15Work/готовые билды/build86
-Build number: 171
+Build path: /Users/romagrachev/mig15Work/готовые билды/build87finel
+Build number: 172
