@@ -11,9 +11,9 @@
         false
     ],
     "PlayerInfo": {
-        "Coins": 5,
-        "Killed": 0,
-        "Flight": 0,
+        "Coins": 116,
+        "Killed": 57,
+        "Flight": 18,
         "MaxHP": 5.0,
         "Damage": 2.0,
         "Armor": 1.0,
@@ -26,7 +26,8 @@
         "Sprice": 12.0,
         "S23price": 12.0,
         "S37price": 12.0,
-        "Desktop": true,
-        "MaxScore": 0
+        "Desktop": false,
+        "MaxScore": 13,
+        "FirstGame": false
     }
 }
